@@ -1,0 +1,190 @@
+/* *************************************************************** */ 
+
+@media (max-width: 1200px) {
+    
+    .about-icon ,
+    .faq .vendor-edit-content input[type="text"] , 
+    .faq .vendor-edit-content  textarea ,
+    .gallery .vendor-edit-content input[type="text"],
+    .gallery .vendor-edit-content textarea ,
+    .manger .vendor-edit-content input[type="text"],
+    .manger .vendor-edit-content textarea ,
+    .product .vendor-edit-content input[type="text"],
+    .product .vendor-edit-content textarea ,
+    .vendor .vendor-edit-content input[type="text"], 
+    .Team .vendor-edit-content input[type="text"] { width: 50% }
+
+}
+
+/* *****************************Start Media Query*************************** */
+
+@media (max-width: 767px) {
+        
+    .about-form .myImg img { width: 130px;height: 130px }
+     
+    .gallery #Grid .img-responsive { width: 100%; height: 100%; margin-bottom: 20px }
+    
+    .gallery .mylists li { margin-bottom: 10px;font-size: 18px}
+    
+
+    /* *****************(max-width: 767px)************************* */
+    
+    .about-icon ,
+    .faq .vendor-edit-content input[type="text"] , 
+    .faq .vendor-edit-content  textarea ,
+    .gallery .vendor-edit-content input[type="text"],
+    .gallery .vendor-edit-content textarea ,
+    .manger .vendor-edit-content input[type="text"],
+    .manger .vendor-edit-content textarea ,
+    .product .vendor-edit-content input[type="text"],
+    .product .vendor-edit-content textarea{ width: 70% }
+    
+    .faq .table>caption+thead>tr:first-child>td,
+    .faq .table>caption+thead>tr:first-child>th,
+    .faq .table>colgroup+thead>tr:first-child>td,
+    .faq .table>colgroup+thead>tr:first-child>th,
+    .faq .table>thead:first-child>tr:first-child>td,
+    .faq .table>thead:first-child>tr:first-child>th { font-size: 13px }
+    
+    .faq .table > tbody > tr > td:nth-of-type(1) { font-size: 12px }
+    
+    .faq .table > tbody > tr > td:nth-of-type(2) p { 
+        font-size: 12px;letter-spacing: .0px;line-height: 22px }
+    
+    #my-tabs9 li , #my-tabs li { font-size: 12px;padding: 10px 5px; }
+
+    
+    .gallery .table>tbody>tr>td,
+    .gallery .table>tbody>tr>th,
+    .gallery .table>tfoot>tr>td,
+    .gallery .table>tfoot>tr>th,
+    .gallery .table>thead>tr>td,
+    .gallery .table>thead>tr>th  { height: 80px;width: 25% }
+    
+    .gallery .table>tbody>tr>td:nth-of-type(2),
+    .gallery .table>tbody>tr>th:nth-of-type(2),
+    .gallery .table>tfoot>tr>td:nth-of-type(2),
+    .gallery .table>tfoot>tr>th:nth-of-type(2),
+    .gallery .table>thead>tr>td:nth-of-type(2),
+    .gallery .table>thead>tr>th:nth-of-type(2)  { display: none}
+    
+    .fileContainer { width: 90% !important;font-size: 12px}
+    
+    .manger .table > tbody > tr > td:nth-of-type(2),
+    .manger .table > tbody > tr > td:nth-of-type(3) { 
+        font-size: 14px;font-weight: bold } 
+    
+    .product .table>tbody>tr>td,
+    .product .table>tbody>tr>th, 
+    .product .table>tfoot>tr>td,
+    .product .table>tfoot>tr>th,
+    .product .table>thead>tr>td,
+    .product .table>thead>tr>th { height: 70px }
+       
+    
+}
+
+/* ************************************************************************ */
+
+@media (max-width: 480px) {
+    
+    .about-icon span { width: 15% }
+    
+    .fileContainer { width: 84% !important}
+    
+    .faq .vendor-edit-content, .faq .my-panel , #my-tabs5 ,
+    .gallery .vendor-edit-content, .gallery .my-panel ,
+    #my-tabs9  , .gallery .all-products ,
+    .manger .vendor-edit-content, .manger .my-panel , #my-tabs6 ,
+    .product .vendor-edit-content, .manger .my-panel , #my-tabs ,
+    .product .my-panel , .product .all-products {
+        margin-right: -5px;
+        margin-left: 0;
+    }
+    
+    .gallery .mylists li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-left: 8px;
+    }
+    
+    /* ************(max-width: 480px)****************** */
+    
+    .about-icon ,
+    .faq .vendor-edit-content input[type="text"] , 
+    .faq .vendor-edit-content  textarea ,
+    .gallery .vendor-edit-content input[type="text"],
+    .gallery .vendor-edit-content textarea ,
+    .manger .vendor-edit-content input[type="text"], 
+    .manger .vendor-edit-content textarea ,
+    .product .vendor-edit-content input[type="text"], 
+    .product .vendor-edit-content textarea ,
+    .vendor .vendor-edit-content input[type="text"],
+    .Team .vendor-edit-content input[type="text"] { width: 90% }
+    
+    #my-tabs9 li , #my-tabs li  { font-size: 10px;padding: 10px 3px; }
+    
+    #my-tabs li  { font-size: 9px;font-weight: bold }
+    
+    #my-tabs2 li, #my-tabs3 li { font-size: 12px}
+        
+}
+
+/* ************************************************************************ */
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+   
+    
+   .gallery .mylists li { margin-bottom: 10px}
+    
+    
+    /* *****(min-width: 768px) and (max-width: 991px)******* */
+    
+    .about-icon ,
+    .faq .vendor-edit-content input[type="text"] , 
+    .faq .vendor-edit-content  textarea ,
+    .gallery .vendor-edit-content input[type="text"],
+    .gallery .vendor-edit-content textarea ,
+    .manger .vendor-edit-content input[type="text"],
+    .manger .vendor-edit-content textarea ,
+    .product .vendor-edit-content input[type="text"], 
+    .product .vendor-edit-content textarea ,
+    .vendor .vendor-edit-content input[type="text"],
+    .Team .vendor-edit-content input[type="text"]{ width: 70% }
+    
+    .faq .table>caption+thead>tr:first-child>td,
+    .faq .table>caption+thead>tr:first-child>th,
+    .faq .table>colgroup+thead>tr:first-child>td,
+    .faq .table>colgroup+thead>tr:first-child>th,
+    .faq .table>thead:first-child>tr:first-child>td,
+    .faq .table>thead:first-child>tr:first-child>th { font-size: 13px }
+    
+    .faq .table > tbody > tr > td:nth-of-type(1) { font-size: 12px }
+    
+    .faq .table > tbody > tr > td:nth-of-type(2) p { 
+        font-size: 12px;letter-spacing: .0px;line-height: 22px }
+    
+    .product .table>tbody>tr>td,
+    .product .table>tbody>tr>th, 
+    .product .table>tfoot>tr>td,
+    .product .table>tfoot>tr>th,
+    .product .table>thead>tr>td,
+    .product .table>thead>tr>th { height: 70px }
+    
+}
+
+/* *************************************************************** */ 
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+   
+   .gallery .mylists li { margin-bottom: 10px}
+    
+        
+  
+}

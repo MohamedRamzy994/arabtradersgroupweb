@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="617842996caa416aa87bfa7851a2afdf" Name="Diagram1">
+        <EntityTypeShape EntityType="ATGModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetAbout" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetContact" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetEmployee" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetFaq" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetGallery" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetManager" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetProduct" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetRole" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetUser" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.AspNetVendor" Width="1.5" PointX="5.25" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATGModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="ATGModel.FK_AspNetAbout_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetContacts_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetEmployees_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetFaqs_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetGallery_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetManagers_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetProducts_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.FK_AspNetVendors_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ATGModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

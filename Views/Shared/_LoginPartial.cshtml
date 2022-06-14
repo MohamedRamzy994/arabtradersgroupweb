@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNet.Identity
+@using ArabTradersGroup.Models;
+@using System.Threading;
+@if (Request.IsAuthenticated)
+{
+    ATGEntities Context = new ATGEntities();
+
+    var ManagerId= User.Identity.GetUserId();
+
+    string FirstName= Context.AspNetManagers.Where(i => i.Manager_Id == ManagerId).SingleOrDefault().Manager_Fname;
+    string LastName = Context.AspNetManagers.Where(i => i.Manager_Id == ManagerId).SingleOrDefault().Manager_Lname;
+
+    string FullName = FirstName +" "+ LastName;
+
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+            @Html.AntiForgeryToken()
+
+<ul class="nav navbar-nav navbar-right">
+
+    <li>
+       @{ string lang = Thread.CurrentThread.CurrentCulture.Name;
+
+           if (lang=="ar-SA")
+           {
+
+               lang = "en-US";
+           }
+           else if (lang=="en-US")
+           {
+               lang = "ar-SA";
+           }
+
+        }
+        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(),ViewContext.RouteData.Values["controller"].ToString(),new {language=lang})">
+           @ArabTradersGroup.App_LocalResources.ATG.changelanguage
+            <i class="fa fa-language"></i>
+        </a>
+    </li>
+    <li>
+        @Html.ActionLink("Hello " + FullName + "!", "Index", "Dashboard", routeValues: null, htmlAttributes: new { title = "Manage" })
+    </li>
+    <li><a href="javascript:document.getElementById('logoutForm').submit()">@ArabTradersGroup.App_LocalResources.ATG.logoff <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+</ul>
+    }
+}
+else
+{
+<ul class="nav navbar-nav navbar-right">
+    @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" , disabled=true })</li>*@
+    <li>
+        @{ string lang = Thread.CurrentThread.CurrentCulture.Name;
+
+            if (lang == "ar-SA")
+            {
+
+                lang = "en-US";
+            }
+            else if (lang == "en-US")
+            {
+                lang = "ar-SA";
+            }
+
+        }
+        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(),ViewContext.RouteData.Values["controller"].ToString(),new {language=lang})">
+            @ArabTradersGroup.App_LocalResources.ATG.changelanguage
+            <i class="fa fa-language"></i>
+        </a>
+    </li>
+
+    <li>
+        <a id="loginLink" href="@Url.Action("Login","Account",routeValues:null)">@ArabTradersGroup.App_LocalResources.ATG.loginu&nbsp;<span><i class='fa fa-sign-in'></i></span></a>
+    </li>
+</ul>
+}

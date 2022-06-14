@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    ViewBag.currentcontact = "current";
+}
+
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.contactus</h1>
+    </div>
+</section>
+
+
+<!--Contact Section-->
+<section class="contact-section">
+    <div class="auto-container">
+        <!--Section Title-->
+        <div class="sec-title-one">
+            <h2>@ArabTradersGroup.App_LocalResources.ATG.contactusleavemessage</h2>
+        </div>
+
+        <div class="contact-form default-form">
+            <form method="post" action="#" id="contact-form">
+                <div class="row clearfix">
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="firstname" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.FirstNameModel *">
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="lastname" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.LastNameModel">
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" name="email" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.EmployeeEmailModel">
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="subject" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.subject">
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <textarea name="message" placeholder="@ArabTradersGroup.App_LocalResources.ATG.message"></textarea>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <div class="text-center"><button type="submit" class="theme-btn btn-style-one" disabled="disabled">@ArabTradersGroup.App_LocalResources.ATG.sendnow</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Info Column-->
+            <div class="info-column col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <div class="column-header"><h3>@ArabTradersGroup.App_LocalResources.ATG.footeraddress</h3></div>
+                <div class="info-box">
+                    <div class="inner">
+                        <div class="icon"><span class="flaticon-placeholder"></span></div>
+                        <h4>@ArabTradersGroup.App_LocalResources.ATG.footeraddress</h4>
+                        <div class="text">@ArabTradersGroup.App_LocalResources.ATG.footeraddressdata</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Info Column-->
+            <div class="info-column col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="column-header"><h3>@ArabTradersGroup.App_LocalResources.ATG.contactus</h3></div>
+                <div class="info-box">
+                    <div class="inner">
+                        <div class="icon"><span class="flaticon-technology-4"></span></div>
+                        <h4>@ArabTradersGroup.App_LocalResources.ATG.contactus</h4>
+                        <div class="text">@ArabTradersGroup.App_LocalResources.ATG.footerphonedata</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Info Column-->
+            <div class="info-column col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <div class="column-header"><h3>@ArabTradersGroup.App_LocalResources.ATG.footeremail</h3></div>
+                <div class="info-box">
+                    <div class="inner">
+                        <div class="icon"><span class="flaticon-envelope"></span></div>
+                        <h4>@ArabTradersGroup.App_LocalResources.ATG.footeremail</h4>
+                        <div class="text">@ArabTradersGroup.App_LocalResources.ATG.footeremailedata</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Map Section-->
+<section class="map-section">
+    <div class="map-outer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.1506915485043!2d31.179127020138743!3d31.10554348159927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7a0c9f8e1e3e7%3A0x8632cda98cd5989c!2z2LTYsdmD2Kkg2KfZhNiq2KzYp9ixINin2YTYudix2Kgg2YTZhNiq2KzYp9ix2Kk!5e0!3m2!1sar!2seg!4v1513242863976" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    </div>
+</section>
+
+
+<!--Subscribe Section-->
+<section class="subscribe-section">
+    <div class="auto-container">
+        <!--Form Container-->
+        <div class="form-container">
+            <div class="row clearfix">
+
+                <div class="col-lg-4 col-md-12 col-xs-12">
+                    <h5>@ArabTradersGroup.App_LocalResources.ATG.newsletter</h5>
+                    <h3>@ArabTradersGroup.App_LocalResources.ATG.stayupdate</h3>
+                </div>
+                <div class="col-lg-8 col-md-12 col-xs-12">
+                    <div class="subscribe-form">
+                        <form method="post" action="http://wp1.themexlab.com/2017/warsaw/contact.html">
+                            <div class="form-group">
+                                <input type="email" name="email" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.email" required>
+                                <button type="submit" class="theme-btn btn-style-three" disabled="disabled">@ArabTradersGroup.App_LocalResources.ATG.sendnow</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    
+    <script src="@Url.Content("~/Scripts/js/validate.js")"></script>
+    <!--Google Map APi Key-->
+    <script src="http://maps.google.com/maps/api/js?key="></script>
+    <script src="@Url.Content("~/Scripts/js/map-script.js")"></script>
+    <!--End Google Map APi-->
+
+}

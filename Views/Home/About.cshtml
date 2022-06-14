@@ -1,0 +1,185 @@
+﻿@using ArabTradersGroup.Models
+@model HomeViewModel
+
+@{
+    ViewBag.Title = "About";
+    ViewBag.currentabout = "current";
+}
+
+
+
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.aboutus</h1>
+    </div>
+</section>
+
+
+<!--About Farm Section-->
+<section class="about-farm style-two">
+    <div class="auto-container">
+        <!--Section Title-->
+        <div class="sec-title-one">
+            <h2>@ArabTradersGroup.App_LocalResources.ATG.welcomourcompany</h2>
+        </div>
+
+        <div class="row clearfix">
+            <!--Column-->
+            <div class="column col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                <figure class="image-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="../../Images/images/resource/about.jpg" alt=""></figure>
+            </div>
+            <!--Column-->
+            <div class="column col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                <div class="tabs-box tabs-style-one">
+                    <div class="row clearfix">
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <!--Tab Buttons-->
+                            <ul class="tab-buttons clearfix">
+                                <li class="tab-btn" data-tab="#tab-one"><span class="txt"><i class="fa fa-home"></i></span></li>
+                                <li class="tab-btn active-btn" data-tab="#tab-two"><span class="txt"><i class="fa fa-briefcase"></i></span></li>
+                                <li class="tab-btn" data-tab="#tab-three"><span class="txt"><i class="fa fa-flag"></i></span></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            <!--Tabs Content-->
+                            <div class="tabs-content">
+
+                                <!--Tab-->
+                                <div class="tab" id="tab-one">
+                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab1</h3>
+                                    <div class="content">
+
+                                        <p class="text-info text-justify">
+
+                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab1paragraph
+                                        </p>
+
+                                    </div>
+                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                </div>
+
+                                <!--Tab / Active Tab-->
+                                <div class="tab active-tab" id="tab-two">
+                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab2 </h3>
+                                    <div class="content">
+
+                                        <p class="text-success text-justify">
+
+                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab2paragraph
+
+                                        </p>
+
+                                    </div>
+                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                </div>
+
+                                <!--Tab-->
+                                <div class="tab" id="tab-three">
+                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab3</h3>
+                                    <div class="content">
+                                        <p class="text-primary text-justify">
+                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab3paragraph
+
+                                        </p>
+
+                                    </div>
+                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--Our Team-->
+<section class="team-section">
+    <div class="auto-container">
+        <!--Section Title-->
+        <div class="sec-title-one">
+            <h2>@ArabTradersGroup.App_LocalResources.ATG.ourmanagers</h2>
+        </div>
+
+        <div class="row clearfix">
+
+            @foreach (var item in Model.HeadManagers)
+            {
+
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <!--Default Team Member / Vertical-->
+                    <div class="default-team-member vertical">
+                        <div class="inner-box clearfix">
+                            <!--Image Column-->
+                            <div class="image-column"><figure class="image"><img src="@Url.Content("/Images/imagesadmin/managersresized/"+item.Manager_Image)" alt=""></figure></div>
+                            <!--Content Column-->
+                            <div class="content-column">
+                                <div class="inner">
+                                    @{
+                                        ATGEntities Context = new ATGEntities();
+
+                                        string Fname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Fname;
+                                        string Lname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Lname;
+                                        string FullName = Fname + " " + Lname;
+
+                                        item.Manager_Fname = FullName;
+
+
+                                    }
+
+                                    <h3>@Html.DisplayFor(m => item.Manager_Fname)</h3>
+                                    <div class="text">@Html.DisplayFor(m => item.Manager_Position)</div>
+                                    <div class="social-links">
+                                        @ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup
+
+                                        @*<a href="#"><span class="fa fa-facebook-official"></span></a>
+                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                        <a href="#"><span class="fa fa-instagram"></span></a>
+                                        <a href="#"><span class="fa fa-skype"></span></a>
+                                        <a href="#"><span class="fa fa-vimeo-square"></span></a>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--Call TO Action One-->
+<section class="call-to-action-one">
+
+    <!--Floted Image Left-->
+    <figure class="floated-image-left wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="../../Images/images/resource/man-with-food-2.png" alt=""></figure>
+
+    <!--Floted Image Right-->
+    <figure class="floated-image-right wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="../../Images/images/resource/food-image-12.png" alt=""></figure>
+
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="sub-title">@ArabTradersGroup.App_LocalResources.ATG.keepintouch</div>
+            <div class="phone-number">@ArabTradersGroup.App_LocalResources.ATG.footerphonedata</div>
+            <div class="text">@ArabTradersGroup.App_LocalResources.ATG.testimonial2paragraph</div>
+        </div>
+    </div>
+</section>
+

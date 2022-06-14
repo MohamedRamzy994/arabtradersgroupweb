@@ -1,0 +1,362 @@
+﻿@using ArabTradersGroup.Models
+@model ManagerViewModel
+
+@{
+    ViewBag.Title = "Manager";
+    ViewBag.Manager = "MYACTIVE";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- --------------------------------------------------- -->
+
+<div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9 right-side">
+
+    <div class="row">
+    
+        <div class="product Myvendor-heading" style="min-height:580px;">
+            <div class="col-xs-12 mytitle">
+            
+
+                    @if (Model.Manager_Error != null || !String.IsNullOrEmpty(Model.Manager_Error))
+            {
+                <div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert"><i class="fa fa-close"></i></button>@Html.DisplayFor(m => m.Manager_Error)</div>
+    }
+                
+            </div>
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+            <div class="manger">
+
+
+
+
+                <ul id="my-tabs6">
+                    <li id="tab10" class="active"> @ArabTradersGroup.App_LocalResources.ATG.managersdata </li>
+                    <li id="tab11" class="In-active"> @ArabTradersGroup.App_LocalResources.ATG.newmanager </li>
+                </ul>
+
+                <!-- -------------------------------------------- -->
+                <!-- start my-panel -->
+                <div class="my-panel dd" id="tab10-content">
+
+                    <div class="col-xs-12">
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading"> @ArabTradersGroup.App_LocalResources.ATG.managerslatest </div>
+
+                            <div style="padding-top:10px;" class="btn-block">
+
+                                <div class="xpanel-body">
+
+                                    <div class="table-responsive">
+
+                                        <!-- Start Table -->
+                                        <table class="table table-hover">
+
+                                            <thead>
+                                                <tr style="cursor:pointer">
+                                                    <th style="width:10%;text-align:center" class="hidden-xs">@ArabTradersGroup.App_LocalResources.ATG.managerimage</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.managerfname</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.managerlname</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.managerposition</th>
+                                                    <th style="width:15%;text-align:center"
+                                                        class="hidden-xs hidden-sm">@ArabTradersGroup.App_LocalResources.ATG.managerdescription</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.manageradd</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.manageredit</th>
+                                                    <th style="width:10%;text-align:center">@ArabTradersGroup.App_LocalResources.ATG.managerdelete</th>
+                                                </tr>
+                                            </thead>
+
+
+                                            <!-- ------------------------------------------------------------------------------------------- -->
+
+                                            <tbody>
+
+                                                @foreach (var item in Model.Managers)
+                                        {
+
+                                            <tr style="cursor:pointer">
+                                               
+                                                <td class="hidden-xs">
+                                                    @if (item.Manager_Image == "default_avatar_male.jpg")
+    {
+
+                                                <img src="@Url.Content("~/Images/imagesadmin/"+item.Manager_Image)" style="width:100px;height:100px">
+}
+else
+{
+                                                <img src="@Url.Content("~/Images/imagesadmin/managersresized/"+item.Manager_Image)" style="width:100px;height:100px">
+}
+
+
+                                                </td>
+                                                <td>
+
+                                                    <p>@Html.DisplayFor(m => item.Manager_Fname)</p>
+                                                </td>
+
+                                                <td>
+
+                                                    <p>@Html.DisplayFor(m => item.Manager_Lname)</p>
+                                                </td>
+                                                <td>
+                                                    <p>@Html.DisplayFor(m => item.Manager_Position)</p>
+                                                </td>
+                                                <td class="hidden-xs hidden-sm">
+                                                    <p style="text-align:center">
+                                                        @Html.DisplayFor(m => item.Manager_Description)
+                                                    </p>
+                                                </td>
+                                                <td class="hidden">
+                                                    @Html.DisplayFor(m => item.Manager_Id)
+
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Register","Account")" data-placement="top" data-toggle="tooltip" title="" data-original-title="Add">
+                                                        <button class="btn btn-info btn-xs btnadd" data-title="Add">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+
+                                                <td>
+                                                    <a data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                        <button class="btn btn-success btn-xs btnedit" data-title="Edit">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <td>
+
+                                                    @using (Html.BeginForm("DeleteManager", "Dashboard", new {Manager_Id = item.Manager_Id }, FormMethod.Post, new { role = "form", id = "DeleteForm" }))
+                                            {
+
+                                                @Html.AntiForgeryToken()
+
+                                                <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                                                    <button type="submit" class="btn btn-danger btn-xs btndelete" data-title="Delete">
+                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    </button>
+                                                </a>
+
+                                    }
+
+                                                </td>
+
+
+                                            </tr>
+
+
+                                            <!-- --------------------------------------------------------------------------- -->
+
+
+
+
+                                }
+
+                                            </tbody>
+
+
+
+                                            <!-- -------------------------------------------------------------------------------------------- -->
+
+                                        </table>
+                                        <!-- End Table -->
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- End xpanel-body -->
+                            </div>
+                            <!-- End btn-block -->
+
+                        </div>
+                        <!-- End panel -->
+
+                    </div>
+                    <!-- End col-xs-12 -->
+
+                </div>
+                <!-- End panel -->
+                <!-- ------------------------------------------------------------------------------------- -->
+
+
+                <div class="vendor-edit-content dd" id="tab11-content">
+
+
+                    <div class="col-xs-offset-1 col-xs-10" id="editsection">
+                        <img id="imgavatar" src="~/Images/imagesadmin/default_avatar_male.jpg" class="img-rounded @ArabTradersGroup.App_LocalResources.ATG.pull img-responsive" />
+
+                        @using (Html.BeginForm("EditManager", "Dashboard", FormMethod.Post, new { role = "form", id = "InsertManagerForm", enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div>
+                        @Html.TextBoxFor(m => m.Manager_Id, new { @class = "hidden" })
+
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(m => m.Manager_Fname, new { @class = "" })
+                        @Html.TextBoxFor(m => m.Manager_Fname, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Manager_Fname, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+
+                        @Html.LabelFor(m => m.Manager_Lname, new { @class = "" })
+                        @Html.TextBoxFor(m => m.Manager_Lname, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Manager_Fname, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div>
+
+                        @Html.LabelFor(m => m.Manager_Position, new { @class = "" })
+                        @Html.TextBoxFor(m => m.Manager_Position, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Manager_Position, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div>
+
+                        @Html.LabelFor(m => m.Manager_Description, new { @class = "" })
+                        @Html.TextAreaFor(m => m.Manager_Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Manager_Description, "", new { @class = "text-danger" })
+                    </div>
+                    <div>
+
+                        @Html.LabelFor(m => m.Manager_Image, new { @class = "" })
+                        <div class="about-icon">
+                            <span class="myIcon">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                            <label class="fileContainer" style="width: 91%;">
+                                Choose Image
+                                @Html.TextBoxFor(m => m.Manager_Image, new { type = "file" })
+                            </label>
+                        </div>
+
+                        @Html.ValidationMessageFor(m => m.Manager_Image, "", new { @class = "text-danger" })
+                    </div>
+
+                    <input class="btn btn-success" id="btnsave" type="submit" value="@ArabTradersGroup.App_LocalResources.ATG.btnsaveproduct" disabled="disabled">
+        }
+
+                    </div>
+                    <!-- col-xs-offset-1 col-xs-10 -->
+
+
+                </div>
+                <!-- End vendor-edit-content -->
+                <!-- ------------------------------------------------------------------------------------- -->
+            </div>
+
+            <!-- End Team -->
+
+        </div>
+        </div>
+        <!--  End product -->
+        <!-- End Row -->
+
+
+    </div>
+<!-- End right-side -->
+<!-- --------------------------------------------------- -->
+
+@section scripts{
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+      <script>
+          
+          function readURL(input) {
+
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+
+                  reader.onload = function (e) {
+                  
+                      $('#editsection #imgavatar').attr('src', e.target.result);
+                  }
+
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+         
+          $("#editsection #Manager_Image").change(function () {
+              readURL(this);
+          });
+          $(document).on("click", ".btnedit", function (e) {
+
+              e.preventDefault();
+
+              var _this = $(this);
+              var _ManagerFname = _this.parent().parent().parent().find("td").eq(1).text().trim();
+              var _ManagerLname = _this.parent().parent().parent().find("td").eq(2).text().trim();
+              var _ManagerPosition = _this.parent().parent().parent().find("td").eq(3).text().trim();
+              var _ManagerDescription = _this.parent().parent().parent().find("td").eq(4).text().trim();
+              var _ManagerImage = _this.parent().parent().parent().find("td").eq(0).find("img").attr("src").trim();
+              var _ManagerId = _this.parent().parent().parent().find("td").eq(5).text().trim();
+
+              console.log(_ManagerFname);
+
+              $("#editsection #Manager_Fname").val(_ManagerFname);
+              
+              $("#editsection #Manager_Lname").val(_ManagerLname);
+             
+
+              $("#editsection #Manager_Position").val(_ManagerPosition);
+              $("#editsection #Manager_Description").val(_ManagerPosition);
+
+              $("#editsection #imgavatar").attr("src", _ManagerImage);
+             
+
+              $("#editsection #Manager_Id").val(_ManagerId);
+
+             
+
+
+              $(".manger .dd:not(:first-of-type)").css({ display: "none" });
+
+             
+
+              $("#tab11").removeClass("In-active").siblings().addClass("In-active");
+
+              $(".manger #my-tabs6").next('div').hide();
+
+              $("#tab11-content").fadeIn(400);
+              
+
+              $("#btnsave").removeAttr("disabled");
+
+
+          });
+
+          $(document).on("click", ".btndelete", function myfunction(e) {
+
+              if (confirm("Are you sure you want to Delete this Manager")) {
+
+                  __doPostBack('btndelete');
+
+
+
+              } else {
+
+
+
+                  return false;
+              }
+              ;
+
+
+
+          })
+
+
+
+
+
+     </script>
+
+
+
+
+}

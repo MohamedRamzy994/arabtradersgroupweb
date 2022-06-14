@@ -1,0 +1,698 @@
+﻿@using ArabTradersGroup.Models
+@model  ProductViewModel
+@using System.Threading;
+@using System.Globalization;
+@{
+    ViewBag.Title = "Product";
+    ViewBag.Product = "MYACTIVE";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog details" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <img src="~/Images/imagesadmin/products/image-6.jpg" class="img-responsive img-thumbnail" style="width:100%;height:250px;" />
+
+
+
+                    </div>
+
+                    <div class="row">
+                        <h3 class="text-center">Green Volies</h3>
+
+                        <p class="img-responsive img-thumbnail">
+
+                            Vestibulum facilisis rhoncus tempor. Duis non ipsum volutpat, rhoat nacus nisi sed, pulvinar ex.
+
+                            Etiam sit amet libero consea typoe, convallis odio estibulum urna.
+                            Vestibulum facilisis rhoncus tempor. Duis non ipsum volutpat, rhoat nacus nisi sed, pulvinar ex.
+
+                            Etiam sit amet libero consea typoe, convallis odio estibulum urna.
+                        </p>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+
+                            <i class="fa fa-user"></i> <span> Amr Fahamy</span>&nbsp;
+                            <i class="fa fa-clock-o"></i> <span> 9 Sep 2017</span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+<!-- --------------------------------------------------- -->
+
+<div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9 right-side">
+
+    <div class="row">
+
+        <div class="product" style="min-height:580px;">
+
+            <div class="col-xs-12 mytitle">
+                <h2 class="text-left">
+                    <a href="@Url.Action("Index","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.dashboard</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Product","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.products</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Vendor","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.vendor</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Team","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.team</a>
+                </h2>
+                @if (Model.Product_Error != null || !String.IsNullOrEmpty(Model.Product_Error))
+                {
+                    <div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert"><i class="fa fa-close"></i></button>@Html.DisplayFor(m => m.Product_Error)</div>
+                }
+            </div>
+
+
+            <!-- -------------------------------------------- -->
+
+            <div class="myDiv">
+
+                <ul id="my-tabs">
+                    <li id="tab1" class="active" data-toggle="tab"> @ArabTradersGroup.App_LocalResources.ATG.productalbum </li>
+                    <li id="tab2" class="In-active" data-toggle="tab">  @ArabTradersGroup.App_LocalResources.ATG.productinformation </li>
+                    <li id="tab24" class="In-active" data-toggle="tab"> @ArabTradersGroup.App_LocalResources.ATG.newproduct </li>
+                </ul>
+
+
+                <!-- -------------------------------------------- -->
+
+                <div class="all-products zz" id="tab1-content">
+
+                    @foreach (var item in Model.Products)
+    {
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+            bool renderRow = Model.Products.ToList().IndexOf(item) % 4 == 0 ? true : false;
+
+            if (renderRow == true)
+            {
+                <div class="clearfix"></div>
+}
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="@Url.Content("~/Images/imagesadmin/productsresized/" + item.Product_Image)" class="img-responsive" style="height:200px;">
+                        </div>
+                        <div class="produ-cost">
+                            <h4>@item.Product_Name_En</h4>
+                        </div>
+                    </div>
+                </div>
+}
+
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+bool renderRow = Model.Products.ToList().IndexOf(item) % 4 == 0 ? true : false;
+
+if (renderRow == true)
+{
+                <div class="clearfix"></div>
+}
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="@Url.Content("~/Images/imagesadmin/productsresized/" + item.Product_Image)" class="img-responsive" style="height:200px;">
+                        </div>
+                        <div class="produ-cost">
+                            <h4>@item.Product_Name_Ar</h4>
+                        </div>
+                    </div>
+                </div>
+}
+
+
+
+
+
+
+
+
+}
+
+                </div>
+                <!-- End all-products -->
+                <!-- -------------------------------------------- -->
+                <!-- start my-panel -->
+                <div class="my-panel zz" id="tab2-content">
+
+
+                    <div class="col-xs-12">
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">@ArabTradersGroup.App_LocalResources.ATG.latestproducts</div>
+
+                            <div style="padding-top:10px;padding-bottom:10px" class="btn-block">
+
+                                <div class="xpanel-body">
+
+                                    <div class="table-responsive">
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr style="cursor:pointer">
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productquantity</th>
+                                                    <th class="hidden-xs hidden-sm">@ArabTradersGroup.App_LocalResources.ATG.productimage</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productname</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productname</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productowner</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.galleryadd</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productedit</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.productdelete</th>
+                                                </tr>
+                                            </thead>
+
+                                            <!-- -------------------------------------------------------------------------- -->
+
+
+
+
+
+                                            <tbody>
+
+                                                @foreach (var item in Model.Products)
+    {
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+
+
+                                                <tr style="cursor:pointer">
+                                                    <td class="hidden">@item.Product_Id</td>
+                                                    <td>@item.Product_Quantity</td>
+                                                    <td class="hidden-xs hidden-sm">
+                                                        <img src="@Url.Content("~/Images/imagesadmin/productsresized/" + item.Product_Image)">
+                                                    </td>
+                                                    <td>@item.Product_Name_Ar</td>
+                                                    <td>@item.Product_Name_En</td>
+
+                                                    @{
+
+        ATGEntities Context = new ATGEntities();
+        string Fname = Context.AspNetManagers.Find(item.Product_Publisher).Manager_Fname;
+        string Lname = Context.AspNetManagers.Find(item.Product_Publisher).Manager_Lname;
+
+        string Owner = Fname + " " + Lname;
+
+        item.Product_Publisher = Owner;
+
+
+
+                                                    }
+
+                                                    <td class="hidden-xs hidden-sm">@item.Product_Publisher</td>
+                                                    <td class="hidden">@item.Product_Description_Ar</td>
+                                                    <td class="hidden">@item.Product_Description_En</td>
+                                                    <td>
+                                                        <a data-placement="top" data-toggle="tooltip" title="" data-original-title="Add">
+                                                            <button class="btn btn-primary btn-xs btnadd" data-title="Add">
+                                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                            <button class="btn btn-success btn-xs btnedit" data-title="Edit">
+                                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        @using (Html.BeginForm("DeleteProduct", "Dashboard", new { Product_Id = item.Product_Id }, FormMethod.Post, new { role = "form", id = "DeleteForm" }))
+        {
+
+                                                @Html.AntiForgeryToken()
+
+                                                <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                                                    <button type="submit" class="btn btn-danger btn-xs btndelete" data-title="Delete">
+                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    </button>
+                                                </a>
+
+}
+
+                                                    </td>
+
+                                                </tr>
+
+                                            <!-- --------------------------------------------------------------------------- -->
+
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+                                                <tr style="cursor:pointer">
+                                                    <td class="hidden">@item.Product_Id</td>
+                                                    <td>@item.Product_Quantity</td>
+                                                    <td class="hidden-xs hidden-sm">
+                                                        <img src="@Url.Content("~/Images/imagesadmin/productsresized/" + item.Product_Image)">
+                                                    </td>
+                                                    <td>@item.Product_Name_Ar</td>
+                                                    <td>@item.Product_Name_En</td>
+                                                    @{
+
+        ATGEntities Context = new ATGEntities();
+        string Fname = Context.AspNetManagers.Find(item.Product_Publisher).Manager_Fname;
+        string Lname = Context.AspNetManagers.Find(item.Product_Publisher).Manager_Lname;
+
+        string Owner = Fname + " " + Lname;
+
+        item.Product_Publisher = Owner;
+
+
+
+                                                    }
+
+                                                    <td class="hidden-xs hidden-sm">@item.Product_Publisher</td>
+                                                    <td class="hidden">@item.Product_Description_Ar</td>
+                                                    <td class="hidden">@item.Product_Description_En</td>
+                                                    <td>
+                                                        <a data-placement="top" data-toggle="tooltip" title="" data-original-title="Add">
+                                                            <button class="btn btn-primary btn-xs btnadd" data-title="Add">
+                                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                            <button class="btn btn-success btn-xs btnedit" data-title="Edit">
+                                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        @using (Html.BeginForm("DeleteProduct", "Dashboard", new { Product_Id = item.Product_Id }, FormMethod.Post, new { role = "form", id = "DeleteForm" }))
+        {
+
+                                                @Html.AntiForgeryToken()
+
+                                                <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                                                    <button type="submit" class="btn btn-danger btn-xs btndelete" data-title="Delete">
+                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    </button>
+                                                </a>
+
+}
+
+                                                    </td>
+
+                                                </tr>
+}
+
+}
+
+
+                                            </tbody>
+
+
+                                            <!-- --------------------------------------------------------------------------- -->
+
+                                        </table>
+                                        <!-- End Table -->
+
+                                    </div>
+                                    <!-- /.table-responsive -->
+
+                                </div>
+
+                                <a href="#" class="btn btn-default btn-block btn-product">
+                                    View All Products
+                                </a>
+
+                            </div>
+                            <!-- End btn-block -->
+
+                        </div>
+                        <!-- End panel -->
+
+                    </div>
+                    <!-- End col -->
+
+
+
+                </div>
+                <! -- End My panel -->
+                <!-- --------------------------------------------------------------------------- -->
+
+
+                <div class="vendor-edit-content zz" id="tab24-content">
+
+
+                    <div class="col-xs-offset-1 col-xs-9" id="addsection">
+                        <img id="imgavatar" src="~/Images/imagesadmin/default_avatar_male.jpg" class="img-rounded @ArabTradersGroup.App_LocalResources.ATG.pull img-responsive" />
+                        @using (Html.BeginForm("Product", "Dashboard", FormMethod.Post, new { role = "form", id = "InsertProductForm", enctype = "multipart/form-data" }))
+                        {
+
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+
+                            <div>
+                                @Html.LabelFor(m => m.Product_Name_En, new { @class = "" })
+
+                                @Html.TextBoxFor(m => m.Product_Name_En, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Product_Name_En, "", new { @class = "text-danger" })
+
+
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.Product_Name_Ar, new { @class = "" })
+
+                                @Html.TextBoxFor(m => m.Product_Name_Ar, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Product_Name_Ar, "", new { @class = "text-danger" })
+
+
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.Product_Description_En, new { @class = "" })
+
+                                @Html.TextAreaFor(m => m.Product_Description_En, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Product_Description_En, "", new { @class = "text-danger" })
+
+
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.Product_Description_Ar, new { @class = "" })
+
+                                @Html.TextAreaFor(m => m.Product_Description_Ar, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Product_Description_Ar, "", new { @class = "text-danger" })
+
+
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.Product_Quantity, new { @class = "" })
+
+                                @Html.TextBoxFor(m => m.Product_Quantity, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Product_Quantity, "", new { @class = "text-danger" })
+
+
+                            </div>
+
+                            <div>
+
+                                @Html.LabelFor(m => m.Product_Image, new { @class = "" })
+
+
+                                <div class="about-icon">
+                                    <span class="myIcon">
+                                        <i class="fa fa-pencil"></i>
+                                    </span>
+                                    <label class="fileContainer" style="width:91%;">
+                                        Choose Image
+                                        @Html.TextBoxFor(m => m.Product_Image, new { type = "file" })
+                                    </label>
+
+
+
+                                </div>
+                                @Html.ValidationMessageFor(m => m.Product_Image, "", new { @class = "text-danger" })
+                            </div>
+
+                            <input class="btn btn-info team-btn" type="submit" value="@ArabTradersGroup.App_LocalResources.ATG.btnaddproduct">
+
+
+
+                        }
+
+
+                    </div>
+
+
+                    <div class="col-xs-offset-1 col-xs-9 hidden" id="editsection">
+                        <img id="imgavatar" src="~/Images/imagesadmin/default_avatar_male.jpg" class="img-rounded @ArabTradersGroup.App_LocalResources.ATG.pull  img-responsive" />
+                        @using (Html.BeginForm("EditProduct", "Dashboard", FormMethod.Post, new { role = "form", id = "EditProductForm", enctype = "multipart/form-data" }))
+    {
+
+                    <a href="#" id="addproduct"><button class="btn btn-info btnadd"><i class="fa fa-plus"></i> New Product</button></a>
+
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+
+                    <div>
+
+
+                        @Html.TextBoxFor(m => m.Product_Id, new { @class = "form-control hidden" })
+
+                    </div>
+                    <div>
+                        @Html.LabelFor(m => m.Product_Name_En, new { @class = "" })
+
+                        @Html.TextBoxFor(m => m.Product_Name_En, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Product_Name_En, "", new { @class = "text-danger" })
+
+
+                    </div>
+                    <div>
+                        @Html.LabelFor(m => m.Product_Name_Ar, new { @class = "" })
+
+                        @Html.TextBoxFor(m => m.Product_Name_Ar, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Product_Name_Ar, "", new { @class = "text-danger" })
+
+
+                    </div>
+                    <div>
+                        @Html.LabelFor(m => m.Product_Description_En, new { @class = "" })
+
+                        @Html.TextAreaFor(m => m.Product_Description_En, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Product_Description_En, "", new { @class = "text-danger" })
+
+
+                    </div>
+                    <div>
+                        @Html.LabelFor(m => m.Product_Description_Ar, new { @class = "" })
+
+                        @Html.TextAreaFor(m => m.Product_Description_Ar, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Product_Description_Ar, "", new { @class = "text-danger" })
+
+
+                    </div>
+                    <div>
+                        @Html.LabelFor(m => m.Product_Quantity, new { @class = "" })
+
+                        @Html.TextBoxFor(m => m.Product_Quantity, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Product_Quantity, "", new { @class = "text-danger" })
+
+
+                    </div>
+
+                    <div>
+
+                        @Html.LabelFor(m => m.Product_Image, new { @class = "" })
+
+
+                        <div class="about-icon">
+                            <span class="myIcon">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                            <label class="fileContainer" style="width:91%;">
+                                Choose Image
+                                @Html.TextBoxFor(m => m.Product_Image, new { type = "file" })
+                            </label>
+
+
+
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Product_Image, "", new { @class = "text-danger" })
+                    </div>
+
+                    <input class="btn btn-success team-btn" type="submit" value="@ArabTradersGroup.App_LocalResources.ATG.btnsaveproduct">
+}
+                    </div>
+
+
+                    <!-- col-xs-offset-1 col-xs-10 -->
+
+                </div>
+                <!-- vendor-edit-content -->
+                <!-- --------------------------------------------------------------------- -->
+
+            </div>
+
+            <!-- --------------------------------------------------------------------- -->
+
+        </div>
+        <!-- End dashboard-content -->
+
+    </div>
+    <!-- End Row -->
+
+
+</div>
+<!-- End right-side -->
+<!-- --------------------------------------------------- -->
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#addsection #imgavatar').attr('src', e.target.result);
+                    $('#editsection #imgavatar').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#addsection #Product_Image").change(function () {
+            readURL(this);
+        });
+        $("#editsection #Product_Image").change(function () {
+            readURL(this);
+        });
+
+        //-------  Edit procuct details
+
+        $(document).on("click", ".btnedit", function (e) {
+
+            e.preventDefault();
+
+            var _this = $(this);
+            var _productNameEn = _this.parent().parent().parent().find("td").eq(4).text();
+            var _productNameAr = _this.parent().parent().parent().find("td").eq(3).text();
+            var _productId = _this.parent().parent().parent().find("td").eq(0).text();
+            var _productQuantity = _this.parent().parent().parent().find("td").eq(1).text();
+            var _productImage = _this.parent().parent().parent().find("td").eq(2).find("img").attr("src").trim();
+            var _productDescriptionEn = _this.parent().parent().parent().find("td").eq(7).text();
+            var _productDescriptionAr = _this.parent().parent().parent().find("td").eq(6).text();
+
+
+            $("#editsection #Product_Name_En").val(_productNameEn);
+            $("#addsection #Product_Name_En").val("");
+
+
+            $("#editsection #Product_Name_Ar").val(_productNameAr);
+            $("#addsection #Product_Name_Ar").val("");
+
+            $("#editsection #Product_Quantity").val(_productQuantity);
+            $("#addsection #Product_Quantity").val("");
+
+            $("#editsection #Product_Description_En").val(_productDescriptionEn);
+            $("#addsection #Product_Description_En").val("");
+            $("#editsection #Product_Description_Ar").val(_productDescriptionAr);
+            $("#addsection #Product_Description_Ar").val("");
+
+            $("#editsection #imgavatar").attr("src", _productImage);
+            $("#addsection #imgavatar").attr("src", "");
+
+            $("#editsection #Product_Id").val(_productId);
+
+            $("#addsection").addClass("hidden");
+            $("#editsection").removeClass("hidden");
+
+
+
+            $(".product .myDiv .zz:not(:first-of-type)").css({ display: "none" });
+
+
+            $("#tab24").removeClass("In-active").siblings().addClass("In-active");
+
+            $(".product #my-tabs").next('div').hide();
+
+            $("#tab24-content").fadeIn(400);
+
+
+
+
+        });
+
+
+
+        $(document).on("click", ".btnadd", function (e) {
+
+            e.preventDefault();
+
+
+
+            $("#editsection #Product_Name").val("");
+            $("#addsection #Product_Name").val("");
+            $("#editsection #Product_Quantity").val("");
+            $("#addsection #Product_Quantity").val("");
+
+            $("#editsection #Product_Description").val("");
+            $("#addsection #Product_Description").val("");
+
+            $("#editsection #imgavatar").attr("src", "");
+            $("#addsection #imgavatar").attr("src", "/Images/imagesadmin/default_avatar_male.jpg");
+
+            $("#addsection #Product_Image").val("");
+
+            $("#addsection").removeClass("hidden");
+            $("#editsection").addClass("hidden");
+
+
+            $(".product .myDiv .zz:not(:first-of-type)").css({ display: "none" });
+
+
+            $("#tab24").removeClass("In-active").siblings().addClass("In-active");
+
+            $(".product #my-tabs").next('div').hide();
+
+            $("#tab24-content").fadeIn(400);
+
+
+
+
+        });
+
+
+        $(document).on("click", ".btndelete", function myfunction(e) {
+
+            if (confirm("Are you sure you want to Delete this Product")) {
+
+                __doPostBack('btndelete');
+
+
+
+            } else {
+
+
+
+                return false;
+            }
+            ;
+
+
+
+        })
+
+
+
+
+
+    </script>
+
+}

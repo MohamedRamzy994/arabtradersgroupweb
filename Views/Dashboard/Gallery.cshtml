@@ -1,0 +1,507 @@
+﻿@using ArabTradersGroup.Models
+@model GalleryViewModel
+@{
+    ViewBag.Title = "Gallery";
+    ViewBag.Gallery = "MYACTIVE";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- --------------------------------------------------- -->
+
+<div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9 right-side">
+
+    <div class="row">
+
+        <div class="gallery" style="min-height:580px;">
+
+            <div class="col-xs-12 mytitle">
+                <h2 class="text-left"></h2>
+
+                @if (Model.Photo_Error != null || !String.IsNullOrEmpty(Model.Photo_Error))
+    {
+            <div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert"><i class="fa fa-close"></i></button>@Html.DisplayFor(m => m.Photo_Error)</div>
+    }
+
+
+            </div>
+
+
+            <!-- -------------------------------------------- -->
+
+            <div class="myDiv">
+
+                <ul id="my-tabs9">
+                    <li id="tab17" class="active"> @ArabTradersGroup.App_LocalResources.ATG.photogallery</li>
+                    <li id="tab18" class="In-active">  @ArabTradersGroup.App_LocalResources.ATG.galleryinformation</li>
+                    <li id="tab20" class="In-active">  @ArabTradersGroup.App_LocalResources.ATG.newphoto</li>
+                </ul>
+
+
+
+                <!-- -------------------------------------------- -->
+
+                <div class="all-products hh" id="tab17-content">
+
+
+
+
+
+                    <ul id="Grid" class="da-thumbs">
+
+                        @foreach (var item in Model.Photos)
+    {
+
+
+                    <li class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                        <div>
+                            <div class="skills-img">
+                                <img src="@Url.Content("~/Images/imagesadmin/galleriesresized/" +item.Photo_Path)" class="img-responsive"  style="height:300px;"  />
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- -------------------------------------------------- -->
+
+
+
+}
+
+
+
+
+                    </ul>
+
+
+
+                </div>
+                <!-- End all-products -->
+                <!-- -------------------------------------------- -->
+                <!-- start my-panel -->
+                <div class="my-panel hh" id="tab18-content">
+
+
+                    <div class="col-xs-12">
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">@ArabTradersGroup.App_LocalResources.ATG.lgalleries</div>
+
+                            <div style="padding-top:10px;padding-bottom:10px" class="btn-block">
+
+                                <div class="xpanel-body">
+
+                                    <div class="table-responsive">
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr style="cursor:pointer">
+                                                    <th class="hidden-xs">@ArabTradersGroup.App_LocalResources.ATG.galleryimage</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.gallerycaption</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.gallerycaption</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.galleryadd</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.galleryedit</th>
+                                                    <th>@ArabTradersGroup.App_LocalResources.ATG.gallerydelete</th>
+                                                </tr>
+                                            </thead>
+
+
+                                            <tbody>
+
+                                                <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                                                @foreach (var item in Model.Photos)
+    {
+
+
+                                                <tr style="cursor:pointer">
+
+                                                    <td class="hidden">@Html.DisplayFor(m => item.Photo_Id)</td>
+                                                    <td>
+                                                        <img src="@Url.Content("~/Images/imagesadmin/galleriesresized/" +item.Photo_Path)" class="hidden-xs">
+                                                    </td>
+                                                    <td>@Html.DisplayFor(m => item.Photo_Caption_En)</td>
+                                                    <td>@Html.DisplayFor(m => item.Photo_Caption_Ar)</td>
+                                                    <td>
+                                                        <a data-placement="top" data-toggle="tooltip" title="" data-original-title="Add">
+                                                            <button class="btn btn-info btn-xs btnadd" data-title="Add">
+                                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+
+                                                    <td>
+                                                        <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                            <button class="btn btn-success btn-xs btnedit" data-title="Edit">
+                                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+
+                                                        @using (Html.BeginForm("DeleteGallery", "Dashboard", new { Photo_Id = item.Photo_Id }, FormMethod.Post, new { id = "DeleteGaalleryForm", role = "form" }))
+        {
+                                                @Html.AntiForgeryToken()
+                                                <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                                                    <button type="submit" class="btn btn-danger btn-xs btndelete" data-title="Delete">
+                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    </button>
+                                                </a>
+}
+                                                    </td>
+
+                                                </tr>
+
+
+
+}
+
+
+
+                                            </tbody>
+
+
+
+                                            <!-- --------------------------------------------------------------------------- -->
+
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+
+                                <a href="#" class="btn btn-default btn-block btn-product">
+                                    View All Gallery
+                                </a>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ----------------- End my-panel--------------- -->
+            <!-- -------------------------------------------------------------------------------- -->
+
+            <div class="vendor-edit-content hh" id="tab20-content">
+
+                <div class="col-xs-offset-1 col-xs-10" id="addsection">
+
+                    <img id="imgavatar" src="~/Images/imagesadmin/default_avatar_male.jpg" class="img-rounded @ArabTradersGroup.App_LocalResources.ATG.pull img-responsive" />
+
+
+                    @using (Html.BeginForm("Gallery", "Dashboard", FormMethod.Post, new { role = "form", id = "GalleryForm", enctype = "multipart/form-data" }))
+    {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                <div>
+                    @Html.LabelFor(m => m.Photo_Caption_En, new { @class = "" })
+
+                    @Html.TextBoxFor(m => m.Photo_Caption_En, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(m => m.Photo_Caption_En, "", new { @class = "text-danger" })
+
+
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.Photo_Caption_Ar, new { @class = "" })
+
+                    @Html.TextBoxFor(m => m.Photo_Caption_Ar, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(m => m.Photo_Caption_Ar, "", new { @class = "text-danger" })
+
+
+                </div>
+
+
+
+                <div>
+                    @Html.LabelFor(m => m.Photo_Path, new { @class = "" })
+
+                    <div class="about-icon">
+                        <span class="myIcon">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        <label class="fileContainer" style="width: 91%;">
+                            Choose Image
+                            @Html.TextBoxFor(m => m.Photo_Path, new { type = "file" })
+
+
+                        </label>
+
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Photo_Path, "", new { @class = "text-danger" })
+                </div>
+
+                <input class="btn btn-info" type="submit" value="@ArabTradersGroup.App_LocalResources.ATG.btnaddproduct">
+
+}
+
+
+
+
+                </div>
+
+
+                <div class="col-xs-offset-1 col-xs-10 hidden" id="editsection">
+
+                    <img id="imgavatar" src="~/Images/imagesadmin/default_avatar_male.jpg" class="img-rounded @ArabTradersGroup.App_LocalResources.ATG.pull img-responsive" />
+
+
+                    @using (Html.BeginForm("EditGallery", "Dashboard", FormMethod.Post, new { role = "form", id = "EditGalleryForm", enctype = "multipart/form-data" }))
+    {
+
+                <a href="#" id="addproduct"><button class="btn btn-info btnadd"><i class="fa fa-plus"></i> New Product</button></a>
+
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                <div>
+                    @Html.TextBoxFor(m => m.Photo_Id, new { @class = "hidden" })
+
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.Photo_Caption_En, new { @class = "" })
+
+                    @Html.TextBoxFor(m => m.Photo_Caption_En, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(m => m.Photo_Caption_En, "", new { @class = "text-danger" })
+
+
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.Photo_Caption_Ar, new { @class = "" })
+
+                    @Html.TextBoxFor(m => m.Photo_Caption_Ar, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(m => m.Photo_Caption_Ar, "", new { @class = "text-danger" })
+
+
+                </div>
+
+
+
+                <div>
+                    @Html.LabelFor(m => m.Photo_Path, new { @class = "" })
+
+                    <div class="about-icon">
+                        <span class="myIcon">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        <label class="fileContainer" style="width: 91%;">
+                            Choose Image
+                            @Html.TextBoxFor(m => m.Photo_Path, new { type = "file" })
+
+
+                        </label>
+
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Photo_Path, "", new { @class = "text-danger" })
+                </div>
+
+                <input class="btn btn-info" type="submit" value="Save">
+
+}
+
+
+
+
+                </div>
+
+
+            </div>
+
+            <!-- -------------------------------------------------------------------------- -->
+
+
+        </div>
+        <!-- End dashboard-content -->
+
+    </div>
+    <!-- End Row -->
+
+
+</div>
+<!-- End right-side -->
+<!-- --------------------------------------------------- -->
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#addsection #imgavatar').attr('src', e.target.result);
+                $('#editsection #imgavatar').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#addsection #Photo_Path").change(function () {
+        readURL(this);
+    });
+
+    $("#editsection #Photo_Path").change(function () {
+        readURL(this);
+    });
+
+    
+    $(document).on("click", ".btnedit", function (e) {
+
+        e.preventDefault();
+
+        var _this = $(this);
+        var _photoCaptionEn = _this.parent().parent().parent().find("td").eq(2).text();
+        var _photoCaptionAr = _this.parent().parent().parent().find("td").eq(3).text();
+        var _photoId = _this.parent().parent().parent().find("td").eq(0).text();
+        var _photoImage = _this.parent().parent().parent().find("td").eq(1).find("img").attr("src").trim();
+        
+
+
+        $("#editsection #Photo_Caption_En").val(_photoCaptionEn);
+        $("#addsection #Photo_Caption_En").val("");
+
+        $("#editsection #Photo_Caption_Ar").val(_photoCaptionAr);
+        $("#addsection #Photo_Caption_Ar").val("");
+        $("#editsection #Photo_Id").val(_photoId);
+        $("#addsection #Photo_Id").val("");
+
+        $("#editsection #imgavatar").attr("src", _photoImage);
+        $("#addsection #imgavatar").attr("src", "");
+
+
+        $("#addsection").addClass("hidden");
+        $("#editsection").removeClass("hidden");
+
+      
+
+        $(".gallery .hh:not(:first-of-type)").css({ display: "none" });
+
+
+        $("#tab20").removeClass("In-active").siblings().addClass("In-active");
+
+        $(".gallery #my-tabs9").next('div').hide();
+
+        $("#tab20-content").fadeIn(400);
+        var
+            left_side = $(".left-side").height(),
+            faq = $(".faq").height(),
+            footer = $(".footer").height(),
+            Team = $(".Team .my-panel").height(),
+            vendor = $(".vendor .my-panel").height(),
+            gallery = $(".gallery .vendor-edit-content").height(),
+            faqX = $(".faq .vendor-edit-content").height(),
+            calc = left_side - faq - footer - 108 + "px",
+            calc2 = left_side - Team - footer - 200 + "px",
+            calc3 = left_side - vendor - footer - 200 + "px",
+            calc4 = left_side - gallery - footer - 270 + "px",
+            calc5 = left_side - faqX - footer - 223 + "px";
+
+
+        $(".faqNew").next(".footer").css("marginTop", calc);
+
+        $(".Team .my-panel").css("marginBottom", calc2);
+
+        $(".vendor .my-panel").css("marginBottom", calc3);
+
+        $(".gallery .vendor-edit-content").css("marginBottom", calc4);
+
+        $(".faq .vendor-edit-content").css("marginBottom", calc5);
+
+
+    });
+
+
+
+    $(document).on("click", ".btnadd", function (e) {
+
+        e.preventDefault();
+
+
+
+        $("#editsection #Photo_Caption").val("");
+        $("#addsection #Photo_Caption").val("");
+        $("#editsection #Photo_Id").val("");
+        $("#addsection #Photo_Id").val("");
+
+        $("#editsection #imgavatar").attr("src", );
+        $("#addsection #imgavatar").attr("src", "/Images/imagesadmin/default_avatar_male.jpg");
+
+
+        $("#addsection").removeClass("hidden");
+        $("#editsection").addClass("hidden");
+
+
+
+        $(".gallery .hh:not(:first-of-type)").css({ display: "none" });
+
+
+        $("#tab20").removeClass("In-active").siblings().addClass("In-active");
+
+        $(".gallery #my-tabs9").next('div').hide();
+
+        $("#tab20-content").fadeIn(400);
+        var
+            left_side = $(".left-side").height(),
+            faq = $(".faq").height(),
+            footer = $(".footer").height(),
+            Team = $(".Team .my-panel").height(),
+            vendor = $(".vendor .my-panel").height(),
+            gallery = $(".gallery .vendor-edit-content").height(),
+            faqX = $(".faq .vendor-edit-content").height(),
+            calc = left_side - faq - footer - 108 + "px",
+            calc2 = left_side - Team - footer - 200 + "px",
+            calc3 = left_side - vendor - footer - 200 + "px",
+            calc4 = left_side - gallery - footer - 270 + "px",
+            calc5 = left_side - faqX - footer - 223 + "px";
+
+
+        $(".faqNew").next(".footer").css("marginTop", calc);
+
+        $(".Team .my-panel").css("marginBottom", calc2);
+
+        $(".vendor .my-panel").css("marginBottom", calc3);
+
+        $(".gallery .vendor-edit-content").css("marginBottom", calc4);
+
+        $(".faq .vendor-edit-content").css("marginBottom", calc5);
+
+
+    });
+   
+
+    $(document).on("click", ".btndelete", function myfunction(e) {
+
+        if (confirm("Are you sure you want to Delete this Photo")) {
+
+            __doPostBack('btndelete');
+
+
+
+        } else {
+
+
+
+            return false;
+        }
+        ;
+
+
+
+    })
+
+
+
+
+
+
+    
+</script>
+}

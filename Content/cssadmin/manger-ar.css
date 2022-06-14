@@ -1,0 +1,198 @@
+.h1 , h2 , h3 , h4 , h5 , .lead , p { font-family: 'Droid Sans', sans-serif;  }
+
+
+body {
+    font-family: 'DroidArabicKufiRegular',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+
+/* ************************************** */
+
+.manger { margin-top: 100px }
+
+.manger .table > tbody > tr > td:first-of-type  {
+    width: 25%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.manger .table > tbody > tr > td:nth-of-type(2)  {
+    width: 50%
+}
+
+.manger .table > tbody > tr > td:nth-of-type(1) , 
+.manger .table > tbody > tr > td:nth-of-type(2) ,
+.manger .table > tbody > tr > td:nth-of-type(3) {
+    width: 15%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.manger .table > tbody > tr > td:nth-of-type(4) { 
+    width: 45%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.manger .table > tbody > tr > td:nth-of-type(5) ,
+.manger .table > tbody > tr > td:nth-of-type(6) {
+    width: 5%;
+    text-align: center;
+    vertical-align: middle
+}
+
+
+.manger .table > tbody > tr > td:nth-of-type(2) , 
+.manger .table > tbody > tr > td:nth-of-type(3) {
+    font-weight: 500;color: #777
+}
+
+.manger .table>caption+thead>tr:first-child>td,
+.manger .table>caption+thead>tr:first-child>th,
+.manger .table>colgroup+thead>tr:first-child>td,
+.manger .table>colgroup+thead>tr:first-child>th,
+.manger .table>thead:first-child>tr:first-child>td, 
+.manger .table>thead:first-child>tr:first-child>th {
+    padding-top: 4px;padding-bottom: 12px;font-size: 17px
+}
+
+
+#my-tabs6 { margin-right: 20px;margin-bottom: 0 }
+
+#my-tabs6 li { 
+    display: inline-block;
+    padding: 10px;
+    background-color: #EEE;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0;
+    font-weight: 600;
+    color: #777;
+}
+
+#my-tabs6 li:nth-of-type(1) { 
+    border-top-right-radius: 6px;
+    border-right: 1px solid #FFF;
+    border: 1px solid #CCC;
+    border-bottom: 0;
+}
+
+#my-tabs6 li:nth-of-type(2) { 
+    margin-right: -4px;
+    border-top-left-radius: 6px;
+    border: 1px solid #CCC;
+    border-bottom: 0;
+}
+
+#my-tabs6 li.In-active { 
+    background-color: #CCC;
+    border-bottom: 1px solid #FFF;
+}
+
+.manger .vendor-edit-content input[type="text"] {  
+    border: 1px solid #dad9d9;
+    height: 34px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding-right: 10px
+}
+
+
+
+.manger .vendor-edit-content textarea { resize: none;margin-bottom: 15px }
+
+.manger .vendor-edit-content .btn-primary { margin-bottom: 50px }
+
+.manger .vendor-edit-content { margin-bottom: 50px }
+
+
+.manger .panel {
+    margin-top: 0;
+    margin-right: 4px;
+    margin-left: 6px;
+    border-radius: 6px;
+}
+
+.manger .my-panel , .manger .vendor-edit-content {
+    background-color: #EEE;
+    padding: 1em;
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 35px;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+}
+
+.manger .panel-default > .panel-heading {
+    color: #777;
+    font-weight: bold;
+    background-color: #DDD;
+    border: 1px solid #CCC;
+}
+
+.manger .colored { color: #FFF }
+
+.manger .vendor-edit-content .btn { margin-bottom: 20px }
+
+
+/* ****************************************************************** */
+
+.about-icon { position: relative;width: 50% }
+
+.about-icon span {
+    display: inline-block;
+    float: right;
+    width: 7%;
+    background: #CCC;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+    background: #FFF;
+    height: 40px;
+    line-height: 40px;
+    color: #777;
+    cursor: pointer;
+    padding-right: 10px;
+    border: 1px solid #CCC;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.fileContainer [type=file] {
+    cursor: pointer;
+}
+
+.fileContainer [type=file] {
+    display: block;
+    filter: alpha(opacity=0);
+    max-height: 100%;
+    max-width: 93%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* *************************************** */
+
+.manger .vendor-edit-content input[type="text"],
+.manger .vendor-edit-content textarea {
+    width: 50%;
+    padding-right: 10px
+}
+

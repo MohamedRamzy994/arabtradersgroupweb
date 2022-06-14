@@ -1,0 +1,213 @@
+.h1 , h2 , h3 , h4 , h5 , .lead { font-family: 'Droid Sans', sans-serif;  }
+
+
+body {
+    font-family: 'DroidArabicKufiRegular',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+ul { list-style-type: none; }
+
+.login-icons ul { padding-right: 0;margin-right: 0;text-align: center }
+
+.myimg {
+    background: url(../../Images/imagesadmin/login.jpg)no-repeat;
+    background-size: cover;
+    height: 150px;
+    text-align: center;
+    color: #FFF;
+    margin-top: 100px
+}
+
+.sigin-content , .login-content {
+    background: #FFF;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+    min-height: 400px;
+    margin-bottom: 100px
+}
+
+
+.myimg h1 {
+    text-align: center;
+    line-height: 150px
+}
+
+.myform {
+    padding: 4em 2em
+}
+
+.myform input[type="text"], .myform input[type="password"] {
+    font-size: 0.9em;
+    padding: 10px 20px;
+    width: 100%;
+    color: #686967;
+    outline: none;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: #F5F5F5;
+    margin: 0em 0em 1.5em 0em;
+}
+
+.forgot-top-grids {
+    margin: 1em 0em;
+    padding: 0em 1.5em;
+}
+
+.forgot-grid {
+    float: right;
+}
+
+.forgot-grid ul {
+    margin: 0;
+    padding: 0px;
+}
+
+.forgot-grid ul li {
+    list-style: none;
+    display: inline-block
+}
+
+.forgot-grid ul li input[type="checkbox"] {
+    display: none;
+}
+
+.forgot-grid ul li input[type="checkbox"]+label {
+    position: relative;
+    padding-right: 31px;
+    color: #FC8213;
+    display: inline-block;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.forgot-grid ul li input[type="checkbox"]+label span:first-child {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border: 2px solid #FC8213;
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+}
+
+.forgot-grid ul li input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    background: url(../../Images/imagesadmin/tick.png)no-repeat 1px -1px;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.myform input[type="submit"] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background: #337AB7;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    display: block;
+}
+
+.sign-down h4 {
+    font-size: 1em;
+    color: #000;
+    text-align: center;
+}
+
+.sign-down h4 a {
+    font-size: 1em;
+    color: #68AE00;
+    text-align: center;
+    margin-top: 1em;
+    display: inline-block;
+    font-weight: bold
+}
+
+.sign-down h5 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.sign-down h5 a {
+    color: #337AB7;
+    text-decoration: underline;
+}
+
+/* ********************************************************************************* */
+
+
+.login-block h3 {
+    font-size: 1em;
+    color: #000;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.login-block h3 a {
+    color: #337AB7;
+    font-weight: bold
+}
+
+.login-block h2 {
+    color: #68AE00;
+    font-size: 0.875em;
+    margin: 1.2em 0;
+    text-align: center;
+}
+
+.login-icons ul {
+    text-align: center;
+}
+
+.login-icons ul li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.login-icons ul li a {
+    display: block;
+}
+
+.login-icons i.fa.fa-facebook,
+.login-icons i.fa.fa-twitter,
+.login-icons i.fa.fa-google-plus {
+    font-size: 1em;
+    color: #FFFFFF;
+    width: 33px;
+    height: 33px;
+    line-height: 34px;
+    vertical-align: middle;
+    background: #3b5998;
+    transition: 0.5s all;
+}
+
+.login-icons i.fa.fa-twitter {
+    background: #55acee;
+}
+
+.login-icons i.fa.fa-google-plus {
+    background: #dc4e41;
+}
+
+h5.link {
+    font-size: 1em;
+    text-align: left;
+    margin-top: 1em;
+}
+
+

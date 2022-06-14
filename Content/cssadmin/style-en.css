@@ -1,0 +1,812 @@
+/*********************************** Start global **************************************/
+
+h1, h2, h3, h4, h5, .lead , p {font-family: 'Droid Sans', sans-serif }
+
+body { font-family: 'Droid Sans', sans-serif;overflow-x: hidden}
+
+/* ************************************** */
+
+ul { list-style-type: none;padding-left: 0;padding-right: 0 }
+
+p { letter-spacing: 0.8px; line-height: 28px; }
+
+a { text-decoration: none !important;}
+
+.big-row { margin-bottom: 30px }
+
+/*********************************** End global **************************************/
+
+
+/******************************** Start Mynavbar *************************************/
+
+.Mynavbar {
+    background-color: #333;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    color: #FFF;
+}
+
+.Mynavbar .first , .Mynavbar .second { display: inline-block }
+
+.Mynavbar .first { margin-left: 25px }
+
+.Mynavbar .first .fa-gear { color: red;font-size: 16px }
+
+.Mynavbar .first .fa-gear ~ p { margin-left: 3px;font-weight: bold}
+
+.Mynavbar .first p { display: inline-block }
+
+/* ******** */
+
+.Mynavbar .second { margin-right: 10px; }
+
+.Mynavbar .second ul li.links { 
+    display: inline-block;
+    margin-right: 20px;
+    position: relative
+}
+
+/*.Mynavbar .second ul li.language { margin-right: 17px }*/
+
+.Mynavbar .second ul li.language p { font-size: 14px;display: inline-block}
+
+.Mynavbar .second .fa-sort-desc { display: inline-block; margin-left: 3px; }
+
+/*.Mynavbar .second .special-desc {display: inline-block;float: right;
+    margin-top: 13px;margin-right: 3px;}*/
+
+.Mynavbar .second .progress { width: 200px;height: 10px}
+
+.Mynavbar .myList { margin-bottom: -4px }
+
+.Mynavbar .myList a { color: #FFF }
+
+.languge-div , .jobs , .notifications { position: absolute }
+
+.languge-div ul li , .notifications ul li {display: block}
+
+.notifications h3 { font-size: 17px }
+
+.notifications .media { margin-bottom: 10px }
+
+.notifications .media-body p { margin-bottom: 0 }
+
+.languge-div , .notifications , .progress {
+    background: #FFF;
+    border: 1px solid rgba(0,0,0,0.17);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    top: 100%
+}
+
+.languge-div { right: 8%;width: 120px; }
+
+.notifications { right: 7%; width: 320px; }
+
+.notifications ul li { padding-left: 15px }
+
+.notifications h3 , .jobs h3 {
+    background-color: #EEE;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 2px;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 17px
+}
+
+.jobs { border: 1px solid #DDD;top: 100%;right: 13% }
+
+.jobs h3 { margin-top: 0 }
+
+.jobs .pull-left , .Mynavbar .second .progress { margin-left: 20px;}
+
+.jobs .pull-right { margin-right: 20px;}
+
+.notifications h3:last-of-type a ,
+.notifications h3:last-of-type ,
+.jobs h3:last-of-type a ,
+.jobs h3:last-of-type { 
+    color: #337ab7;
+    font-weight: 600;
+    margin-bottom: 0; 
+}
+
+.languge-div ul li {
+    border-bottom: 1px solid #DDD;
+    padding-left: 14px;
+    line-height: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: all .5s ease-in-out
+}
+
+.languge-div ul li:hover {
+    padding-left: 20px;
+    transition: all .5s ease-in-out
+}
+
+.xx {
+    background-color: #FFF;
+    color: #000
+}
+
+/* ****************************************************************************************************************************************************************************************************************** End Mynavbar ***************************************** */
+
+
+/******************************** Start All *************************************/
+
+.all .left-side {
+    position: fixed;
+    top: 40px;
+    background-color: #333;
+    border-top: 1px solid #000;
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.all .left-side input[type=search] {
+   
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    padding-left: 8px;
+    outline: none;
+    width: 85%;
+    background: #FFF;
+    border: 1px solid #e2e2e2;
+    padding: 4px 10px;
+}
+
+.all .left-side .search button {
+    background-color: #FFF;
+    border: none;
+    height: 30px;
+    width: 15%;
+    margin-left: -4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: 1px solid #EEE;
+    outline: none
+}
+
+.all .left-side .search {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.all .left-side .dashborad-list li:last-of-type { border-bottom: 1px solid #FFF; }
+
+/* .all .left-side .dashborad-list .active { background-color: #000 } */
+
+.MYACTIVE { background-color: #000  }
+
+.all .left-side .dashborad-list li {
+    border-top: 1px solid #FFF;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 8px 15px;
+}
+.all .left-side .dashborad-list li:hover { background-color: #000 }
+.all .left-side .dashborad-list li a { color: #CCC;display: block }
+
+.all .left-side .ul-show { margin-left: 20px }
+
+.all .left-side .ul-show li,.all .left-side .ul-show li:last-of-type { border: none }
+
+/* ******************************* End All ************************************ */
+
+
+
+/* *********************** start dashboard-conten ***************************** */
+
+.all .dashboard-content hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 2px solid #EEE;
+    width: 95%;
+}
+
+.all .dashboard-content .mytitle { margin-left: 25px }
+
+.all .dashboard-content .mytitle h2 { margin-bottom: 25px }
+
+/* *********************************** */
+
+.all .dashboard-content .col-md-3 { 
+    width: 22.5%;
+    margin-right: 2%;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.all .dashboard-content .first { margin-left: 2% }
+
+/* ******************************************************** */
+
+.all .dashboard-content .second-content .icon {
+    font-size: 60px;
+    margin-top: 12px;
+    color: #FFF;
+    margin-left: 20px
+}
+
+ .all .dashboard-content .second-content span:first-of-type {
+    margin-top: 12px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #FFF;
+}
+
+ .all .dashboard-content .second-content span:last-of-type {
+    margin-top: -18px;
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.all .dashboard-content .second-white {
+    position: relative;
+    background-color: #FFF;
+    height: 35px;
+}
+
+/* ************** Start first ******************* */
+
+.all .dashboard-content .first {
+    border: 1px solid #5CB85C;
+    border-radius: 3px;
+}
+
+.all .dashboard-content .first .second-content { 
+    background-color: #5CB85C;
+    padding-bottom: 18px
+}
+
+.all .dashboard-content .first .second-white p:first-of-type {
+    padding-top: 4px;
+    margin-left: 20px;
+    color: #5CB85C;
+}
+
+.all .dashboard-content .first .second-white p:last-of-type {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #5CB85C;
+}
+
+/* ************** End first ******************* */
+
+/* ************** Start Second ******************* */
+
+.all .dashboard-content .second {
+    border: 1px solid #D9534F;
+    border-radius: 3px;
+}
+
+.all .dashboard-content .second .second-content { 
+    background-color: #D9534F;
+    padding-bottom: 18px
+}
+
+.all .dashboard-content .second .second-white p:first-of-type {
+    padding-top: 4px;
+    margin-left: 20px;
+    color: #D9534F;
+}
+
+.all .dashboard-content .second .second-white p:last-of-type {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #D9534F;
+}
+
+/* ************** End Second ******************* */
+
+
+/* ************** Start third ******************* */
+
+.all .dashboard-content .third {
+    border: 1px solid #337AB7;
+    border-radius: 3px;
+}
+
+.all .dashboard-content .third .second-content { 
+    background-color: #337AB7;
+    padding-bottom: 18px
+}
+
+.all .dashboard-content .third .second-white p:first-of-type {
+    padding-top: 4px;
+    margin-left: 20px;
+    color: #337AB7;
+}
+
+.all .dashboard-content .third .second-white p:last-of-type {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #337AB7;
+}
+
+/* ************** End third ******************* */
+
+/* ************** Start four ******************* */
+
+.all .dashboard-content .four {
+    border: 1px solid #F0AD4E;
+    border-radius: 3px;
+}
+
+.all .dashboard-content .four .second-content { 
+    background-color: #F0AD4E;
+    padding-bottom: 18px
+}
+
+.all .dashboard-content .four .second-white p:first-of-type {
+    padding-top: 4px;
+    margin-left: 20px;
+    color: #F0AD4E;
+}
+
+.all .dashboard-content .four .second-white p:last-of-type {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #F0AD4E;
+}
+
+
+/************************ end dashboard-conten ****************************** */
+
+
+.panel  {
+    margin-top: 20px;
+    margin-left: 6px;
+    margin-right: 6px
+}
+
+/************************ Start Progress ****************************** */
+
+.myprogress-content  , .above-content { 
+    margin-top: 5px;
+    border: 1px solid #DDD;
+    /*margin-left: 20px;*/
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+}
+
+.myprogress-content {  padding: 2.2em 2em;margin-left: 8px }
+
+.above-content { padding-bottom: 15px;margin-right: 8px }
+
+.myprogress h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #5F5D5D;
+    text-transform: uppercase;
+    font-family: 'Droid Sans', sans-serif;
+    margin-top: 0;
+    margin-bottom: 30px
+}
+
+.myprogress .word , .myprogress  .value {
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+}
+
+.myprogress .word { margin-bottom: 5px; }
+
+.myprogress .value { margin-top: 5px; }
+
+.above-content .background-img {
+    background-image: url(../images/background.jpg);
+    -webkit-background-size: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 190px;
+    position: relative
+}
+
+.above-content img {
+    transform: translate(-50%, -50%);
+    border: 2px solid #ccc;
+    position: absolute;
+    padding: 1px;
+    top: 45%;
+    left: 50%;
+}
+
+.above-content p {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.above-content .social-icons { display: flex;justify-content: center }
+
+.above-content .social-icons li { margin-left: 10px;margin-right: 10px}
+
+.above-content .social-icons li:nth-of-type(1) i ,
+.above-content .social-icons li:nth-of-type(2) i ,
+.above-content .social-icons li:nth-of-type(3) i {
+    font-size: 1em;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 2em;
+    transition: 0.5s all;
+    text-align: center;
+}
+
+.above-content .social-icons li:nth-of-type(1) i { background: #3c579e; }
+
+.above-content .social-icons li:nth-of-type(2) i { background: #0f98ce; }
+
+.above-content .social-icons li:nth-of-type(3) i { background: #ca2429; }
+
+.above-content .social-icons li:hover i {
+    border-radius: 35px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+   
+}
+
+
+.above-content h2 { text-align: center;margin-top: -10px }
+
+.above-content h4 { margin-top: 33px;margin-left: 53px;}
+
+/* ******************************************************************** */
+
+.barfiller {
+  width: 100%;
+  height: 8px;
+  background: #EEE;
+  border: 1px solid #E4E4E4;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.barfiller .fill {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+}
+
+.barfiller .tipWrap { display: none; }
+
+.barfiller .tip {
+  margin-top: -30px;
+  padding: 2px 4px;
+  font-size: 11px;
+  color: #fff;
+  left: 0px;
+  position: absolute;
+  z-index: 2;
+  background: #333;
+}
+
+.barfiller .tip:after {
+  border: solid;
+  border-color: rgba(0,0,0,.8) transparent;
+  border-width: 6px 6px 0 6px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 100%;
+  z-index: 9
+}
+
+/* ********************** End Progress ***************************** */
+
+/* ********************** End climate ****************************** */
+
+.climate-content { margin-left: 10px;margin-top: 30px }
+
+.climate-content .climate-top { 
+    background-image: url('../../Images/imagesadmin/climate.jpg');
+    background-size: cover;
+    position: relative
+}
+
+.climate-content .climate-top-left , 
+.climate-content .climate-top-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFF
+}
+
+.climate-content .climate-top-left p , .climate-content .climate-top-right p {
+    font-size: 13px;font-weight: bold
+}
+
+.climate-content .climate-top-left h3 { 
+    color: #FC8213;
+    position: relative;
+    font-size: 2em 
+}
+
+.climate-content .climate-top-left h3 { margin-bottom: 10px }
+.climate-content .climate-top-right img { margin-bottom: 20px }
+
+.climate-content .climate-top-left h3 span {
+    color: #FFF;
+    position: absolute;
+    font-size: 0.4em;
+}
+
+
+.climate-content  .climate-top-right img {
+    border-radius: 100%
+}
+
+.climate-content .climate-bottom {
+    background-color: #E58424
+}
+
+/*
+.climate-content .climate-top-right img {
+    -webkit-animation-name: rotateImg;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: rotateImg;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@-webkit-keyframes rotateImg {
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+
+@keyframes rotateImg {
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+*/
+
+.climate-content .climate-bottom h4 , .climate-content .climate-bottom h3 { 
+    text-align: center;color: #FFF;margin-top: 2px
+}
+
+.climate-content .climate-bottom h3 { margin-top: 10px;margin-bottom: 0 }
+
+.climate-content .climate-bottom img { width: 58px;height: 58px;margin-bottom: 0 }
+
+.climate-content .cloud1 { padding-left: 40px }
+.climate-content .cloud2 { padding-left: 30px }
+.climate-content .cloud3 { padding-left: 20px }
+
+.climate-content .cloud1 , .climate-content .cloud2 , .climate-content .cloud3 { 
+    margin-top: 15px;margin-bottom: 15px
+}
+
+/* ************************* End climate *********************************** */
+
+/* ************************* Start Hate *********************************** */
+
+.myhate-content { margin-top: 30px  }
+
+.hate-img { position: relative; }
+
+.hate-img img { height: 310px }
+
+.hate-img .shoppy-rate {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #FC8213;
+    color: #FFF;
+    text-align: center;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+}
+
+.hate-img .shoppy-rate h4 { text-align: center;line-height: 55px }
+
+.hate ul { 
+    position: absolute;
+    bottom: -25px;
+    right: 15px;
+}
+
+.hate ul li { display: inline-block }
+
+.hate ul li:first-of-type { margin-right: 8px }
+
+.hate ul li i {
+    width: 35px;
+    height: 30px;
+    display: inline-block;
+    background: #337AB7;
+    font-size: 1.2em;
+    color: #FFF;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.hate-content {
+    padding: 1.4em 1em;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+}
+
+.hate-content h3 {
+    font-size: 1.5em;
+    margin-top: 6px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: #68AE00;
+    font-family: 'Droid Sans', sans-serif
+}
+
+/* ************************* End Hate *********************************** */
+
+
+/* ************************* Start Brand ********************************* */
+
+.mybrand { margin-top: 30px }
+
+.brand { margin-right: 10px }
+
+/*.popular-brand {  box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15); }*/
+
+.popular-bran-left {
+    background: #fff;
+    /*padding: 1.5em 1em;*/
+}
+
+.popular-bran-left h3 {
+    font-size: 1.2em;
+    color: #68AE00;
+    margin-bottom: 0.2em;
+    font-family: 'Droid Sans', sans-serif
+}
+
+.popular-bran-left h4 {
+    font-size: 0.8em;
+    color: #FC8213;
+}
+
+.popular-bran-left p {
+    font-size: 1em;
+    color: #000;
+    margin-top: 1.3em;
+    line-height: 1.5em;
+}
+
+.popular-bran-right {
+    background: #FC8213;
+    /*padding: 3.5em 1em;*/
+}
+
+.popular-bran-right h3 {
+    text-align: center;
+    font-size: 1.55em;
+    color: #fff;
+    width: 77px;
+    height: 77px;
+    margin: 0 auto;
+    line-height: 73px;
+    border-radius: 62px;
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    -o-border-radius: 62px;
+    border: 3px solid #fff;
+    font-family: 'Droid Sans', sans-serif
+}
+
+
+.popular-follo-left {
+    background: #68AE00;
+    /*padding: 3em 1em;*/
+}
+
+.popular-follo-left p {
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.8em;
+}
+
+.popular-follo-right {
+    /*padding: 3em 1em;*/
+    text-align: center;
+}
+
+.popular-follo-right h4 {
+    font-size: 1.5em;
+    color: #FC8213;
+    margin-bottom: 0.3em;
+    font-family: 'Droid Sans', sans-serif
+}
+
+.popular-follo-right h5 {
+    font-size: 1em;
+    color: #68AE00;
+}
+
+.popular-bran-left , .popular-bran-right ,
+.popular-follo-left ,.popular-follo-right { 
+    position: relative;
+    height: 190px
+}
+
+.popular-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.barnd-first  {
+    margin-left: 15px;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+}
+
+.second-brand {
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+    margin-right: 10px;
+}
+
+/* ************************* End Brand *********************************** */
+
+.dashboard-content .mytitle h2 { 
+    
+    border-bottom: 2px solid #EEE;
+    display:  inline-block;
+    padding-bottom: 5px;    
+    margin-bottom: 20px;
+    margin-top: 65px;
+}
+
+.dashboard-content .mytitle h2 a:nth-of-type(1) { color: #000 }
+
+.dashboard-content .mytitle h2 a:nth-of-type(2) ,
+.dashboard-content .mytitle h2 a:nth-of-type(3) ,
+.dashboard-content .mytitle h2 a:nth-of-type(4) { color: #777 }
+
+.dashboard-content .mytitle h2 a:hover { color: #337ab7 }
+
+/* *********************************************************************** */
+
+.footer {
+    padding-left: 0;
+    background: #777;
+    color: #FFF;
+    padding-top: 10px;
+    margin-top: 30px
+}
+
+.footer p { line-height: 0;padding-top: 10px;padding-bottom: 10px }
+
+.footer a { color: #333;font-size: 15px;font-weight: bold }
+
+
+

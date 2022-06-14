@@ -1,0 +1,139 @@
+﻿@using ArabTradersGroup.Models
+@using System.Globalization
+@using System.Threading
+@using PagedList
+@using PagedList.Mvc
+@model  PagedList.IPagedList<AspNetProduct>
+@{
+    ViewBag.Title = "Products";
+    ViewBag.currentproduct = "current";
+}
+
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.products</h1>
+    </div>
+</section>
+
+
+<!--Shop Section-->
+<section class="shop-section">
+    <div class="auto-container">
+
+        <!--Sort By-->
+        <div class="items-sorting">
+            <div class="row clearfix">
+                <div class="results-column col-md-9 col-sm-12 col-xs-12">
+                    <div class="text">@ArabTradersGroup.App_LocalResources.ATG.companyproducts</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Default Shop Item-->
+            @foreach (var item in Model)
+    {
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+
+
+            bool renderRow = Model.ToList().IndexOf(item) % 4 == 0 ? true : false;
+            if (renderRow == true)
+            {
+                <div class="clearfix"></div>
+    }
+        <div class="default-shop-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="inner-box">
+                <div class="image-box">
+                    <figure class="image"><a href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+@item.Product_Image)" alt=" " style="height:300px;"></a></figure>
+                </div>
+                <div class="lower-content">
+                    <h3><a href="@Url.Action("ProductDetails","Home",null)">@Html.DisplayFor(m => item.Product_Name_En)</a></h3>
+
+                </div>
+
+                <!--Overlay Box-->
+                <div class="overlay-box">
+                    <div class="prod-options">
+                        <a class="lightbox-image option-btn" href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)" title="@item.Product_Name_En" data-fancybox-group="example-gallery"><span class="fa fa-eye"></span></a>
+                        <a class="option-btn" href="@Url.Action("ProductDetails","Home",new {id=item.Product_Id})"><span class="fa fa-link"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+
+
+bool renderRow = Model.ToList().IndexOf(item) % 4 == 0 ? true : false;
+if (renderRow == true)
+{
+        <div class="clearfix"></div>
+}
+        <div class="default-shop-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="inner-box">
+                <div class="image-box">
+                    <figure class="image"><a href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+@item.Product_Image)" alt=" " style="height:300px;"></a></figure>
+                </div>
+                <div class="lower-content">
+                    <h3><a href="@Url.Action("ProductDetails","Home",null)">@Html.DisplayFor(m => item.Product_Name_Ar)</a></h3>
+
+                </div>
+
+                <!--Overlay Box-->
+                <div class="overlay-box">
+                    <div class="prod-options">
+                        <a class="lightbox-image option-btn" href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)" title="@item.Product_Name_Ar" data-fancybox-group="example-gallery"><span class="fa fa-eye"></span></a>
+                        <a class="option-btn" href="@Url.Action("ProductDetails","Home",new {id=item.Product_Id})"><span class="fa fa-link"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+}
+
+
+
+}
+
+
+
+
+        </div>
+
+        <!-- Styled Pagination -->
+        <div class="styled-pagination text-center">
+            @*<ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a class="next" href="#">Next</a></li>
+                </ul>*@
+
+            @*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+
+            @Html.PagedListPager(Model, page => Url.Action("Products", "Home", new { page }))
+
+
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
+

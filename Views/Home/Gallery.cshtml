@@ -1,0 +1,121 @@
+﻿@using ArabTradersGroup.Models
+@using System.Threading
+@using System.Globalization
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<AspNetGallery>
+@{
+    ViewBag.Title = "Gallery";
+    ViewBag.currentgalley = "current";
+}
+
+
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.latestgalleries</h1>
+    </div>
+</section>
+
+
+<!--Gallery Section-->
+<section class="gallery-section gallery-page">
+
+    <div class="auto-container">
+
+        <div class="mixitup-gallery">
+            <!--Filter-->
+            @*<div class="filters text-center">
+                    <ul class="filter-tabs filter-btns clearfix">
+                        <li class="active filter" data-role="button" data-filter="all">All</li>
+                        <li class="active filter" data-role="button" data-filter=".animals">Animals</li>
+                        <li class="active filter" data-role="button" data-filter=".farm">Farm</li>
+                        <li class="active filter" data-role="button" data-filter=".flower">Flower</li>
+                        <li class="filter" data-role="button" data-filter=".fruits">Fruits</li>
+                        <li class="filter" data-role="button" data-filter=".insects">Insects</li>
+                        <li class="filter" data-role="button" data-filter=".market">Market</li>
+                        <li class="filter" data-role="button" data-filter=".organic">Organic</li>
+                        <li class="filter" data-role="button" data-filter=".vegetables">Vegetables</li>
+                    </ul>
+                </div>*@
+
+            <!--Filter List-->
+            <div class="filter-list row clearfix">
+
+                @foreach (var item in Model)
+    {
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+
+
+            <!--Default Portfolio Item -->
+            <div class="default-portfolio-item mix mix_all col-md-4 col-sm-6 col-xs-12 market organic vegetables">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+@item.Photo_Path)" alt=""></figure>
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <div class="overlay-content">
+                                <a href="@Url.Content("/Images/imagesadmin/galleries/"+@item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_En" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+
+            <!--Default Portfolio Item -->
+            <div class="default-portfolio-item mix mix_all col-md-4 col-sm-6 col-xs-12 market organic vegetables">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+@item.Photo_Path)" alt=""></figure>
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <div class="overlay-content">
+                                <a href="@Url.Content("/Images/imagesadmin/galleries/"+@item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_Ar" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+}
+
+
+
+
+
+
+
+}
+            </div>
+
+        </div>
+
+        <!-- Styled Pagination -->
+        <div class="styled-pagination text-center">
+            @*<ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a class="next" href="#">Next</a></li>
+                </ul>*@
+
+            @Html.PagedListPager(Model, page => Url.Action("Gallery", "Home", new { page }))
+
+
+        </div>
+
+    </div>
+</section>
+
+
+

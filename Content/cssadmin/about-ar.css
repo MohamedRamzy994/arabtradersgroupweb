@@ -1,0 +1,114 @@
+.h1 , h2 , h3 , h4 , h5 , .lead , p { font-family: 'Droid Sans', sans-serif;  }
+
+
+body {
+    font-family: 'DroidArabicKufiRegular',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/* ******************************************************************* */
+
+.about-form { margin-top: 100px }
+
+.about-form  .myForm span i { color: #FFF; } 
+
+.about-form  .myForm span i:hover  { cursor: pointer }
+
+.about-form .myForm .form-group input[type="text"] { 
+    margin-right: 3.5%;
+    border-radius: 0;
+    width: 93%;
+    height: 40px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px
+}
+
+.about-form .mybutton button.btn.btn-default {
+    background-color: #B0D133;
+    border-radius: 4px;
+    color: #FFF;
+    margin-top: 20px;
+    padding: 6px 25px;
+    margin-left: 10px
+}
+
+.about-form textarea { width: 100%;height: 180px;resize: none;}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    display: block;
+    filter: alpha(opacity=0);
+    max-height: 100%;
+    max-width: 93%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fileContainer { background: #042252; height: 40px;line-height: 40px; color: #FFF; }
+
+.fileContainer:hover { background-color: #00C6D7 }
+
+.fileContainer [type=file] {
+    cursor: pointer;
+}
+
+.about-form .myImg img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.about-form .fileContainer {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 93%;
+    margin-right: 0
+}
+
+
+.about-icon { position: relative }
+
+.about-icon span {
+    display: inline-block;
+    float: right;
+    width: 7%;
+    background: #B0D133;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.myForm  {
+    background-color: #33B4BC;
+    padding: 30px;
+    border-radius: 7px;
+    margin-bottom: 40px
+}
+
+.right-side .about-title { margin-top: 50px;margin-bottom: 20px }
+
+.right-side .about-title h2 { 
+
+    display: inline-block;
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 8px;
+    color: #777
+}
+
+
+

@@ -1,0 +1,288 @@
+/* *****************************Start Media Query*************************** */
+
+@media (max-width: 767px) {
+    .Mynavbar .myList form ul li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+        .Mynavbar .myList form ul li a {
+            display: inline-block;
+        }
+
+        .Mynavbar .myList form ul li a {
+            font-size: 14px;
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .Mynavbar .myList form ul li a {
+            margin-left: 0px
+        }
+    #imgavatar {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        margin-left: 70px;
+    }
+    .Team .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content textarea { width: 190px } 
+    
+    .all .dashboard-content .mytitle h2 , .product .mytitle h2 ,
+    .product .mytitle h2 { font-size: 17px;font-weight: bold}
+    
+    .all .left-side .search button { display: none }
+    
+    .all .left-side input[type=search] { width: 100%;border-radius: 4px }
+     
+}
+
+@media (max-width: 480px) {
+    
+    .Mynavbar .first { font-size: 10px;margin-right: 10px  }
+    .Mynavbar .myList form ul li  {
+        display: inline-block;
+        margin-left:10px;
+       
+    }
+    .Mynavbar .myList form ul li a {
+        display:inline-block;
+    }
+        .Mynavbar .myList form ul li a {
+                font-size:14px;
+                padding-left:5px;
+               margin-bottom:5px;
+               
+        }
+     
+    .Mynavbar .myList form ul li a { margin-left: 0px}
+
+    #imgavatar {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: 20px;
+        top: 0px;
+    }
+    
+    .dashborad-list span {
+        display: none
+    }
+    
+    .all  .left-side { width: 12% }
+    
+    .all .left-side .dashborad-list li { text-align: center }
+    
+    .all .search { display: none }
+    
+    .Mynavbar .second { margin-left: 0px; font-size: 11px; }
+    
+    .right-side { margin-right: 20% }
+    
+    .all .dashboard-content .first , .all .dashboard-content .second , 
+    .all .dashboard-content .third , .all .dashboard-content .four {
+        margin-right: 2%; }
+    
+    .above-content img { top: 42% }
+    
+    .mybutton .btn-default, .mybutton2 .btn-default { margin-bottom: 20px }
+    
+    .product .all-products, .product .my-panel { padding: 2em 1em 1em 1em }
+    
+    .product .all-products .col-md-3 { padding-left: 10px;padding-right: 10px }
+    
+    .Team .colored, .vendor .colored { font-size: 15px }
+    
+    .Team .vendor-edit-content,.Team .my-panel,
+    .vendor .vendor-edit-content, .vendor .my-panel ,
+    #my-tabs2, #my-tabs3 {
+        margin-right: -5px;
+        margin-left: 0;
+    }
+    
+    .Team .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content textarea { width: 140px } 
+    
+    .all .dashboard-content .mytitle h2 , .product .mytitle h2 ,
+    .product .mytitle h2 { font-size: 15px }
+    
+}
+
+
+/* *************************************************************** */ 
+
+
+/* Small devices   */
+@media (max-width: 767px) {
+    
+    .all .dashboard-content .first , .all .dashboard-content .second , 
+    .all .dashboard-content .third , .all .dashboard-content .four {
+        margin-right: 4%;
+        width: 92%;
+        margin-bottom: 20px
+    }
+    
+    .all .dashboard-content hr { width: 90% }
+    
+    .myprogress-content { margin-left: 8px }
+    
+    .above-content { margin-right: 7px;margin-left: 7px;margin-top: 15px }
+    
+    .climate-content , .myhate-content { margin-left: 5px;margin-right: 5px }
+    
+    .hate-img img { width: 100% }
+    
+    .hate-img .shoppy-rate { width: 55px;height: 55px; top: 10%;right: 6% }
+    
+    .hate-img .shoppy-rate h4 { line-height: 38px; font-size: 15px; }
+    
+    .barnd-first { margin-right: 20px;margin-left: 10px }
+    
+    .second-brand { margin-right: 20px;margin-top: 20px }
+    
+    .above-content h4 { display: none; }
+    
+    .above-content h2 { margin-top: 60px; }
+    
+    .product .produ-cost h4 { font-size: 1.1em;word-wrap: break-word }
+    
+    .product .produ-cost h5 { font-size: 1em;word-wrap: break-word }
+    
+    
+        
+}
+
+
+/* *************************************************************** */ 
+
+
+@media (max-width: 399px) {
+    
+    .above-content img { top: 38% }
+    
+    .above-content h2 { margin-top: 70px }
+    
+    .forgot-grid ul li input[type="checkbox"]+label span:first-child { bottom: 0 }
+    
+    .product .produ-cost h4 { font-size: 12px }
+    
+    .product .produ-cost h3 { font-size: 10px }
+    
+}
+
+/* ************************************************************************ */
+
+@media (max-width: 555px) {
+    
+    .climate-content { overflow: hidden }
+    
+    .climate-content .cloud1{ padding-right: 10px }
+    
+    .climate-content .cloud2 , .climate-content .cloud3 { padding-right: 0px }
+    
+    .climate-content .climate-bottom h4,
+    .climate-content .climate-bottom h3 { margin-right: -30px;font-size: 15px  }
+    
+    .climate-content .climate-bottom img { width: 45px;height: 45px }
+    
+    .climate-content .climate-top-right img { width: 60px; height: 60px;
+        margin-right: -5px; }
+    
+    
+}
+
+
+/* *************************************************************** */ 
+
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+        
+    .all .dashboard-content .second-content .icon { font-size: 40px;margin-top: 24px }
+    
+    .all .dashboard-content .second-content span:first-of-type { margin-bottom: 15px }
+    
+    .all .dashboard-content .first .second-white p:first-of-type ,
+    .all .dashboard-content .second .second-white p:first-of-type ,
+    .all .dashboard-content .third .second-white p:first-of-type ,
+    .all .dashboard-content .four .second-white p:first-of-type {
+        margin-right: 10px;font-size: 12px; }
+    
+    .all .dashboard-content .first { margin-right: 3%; }
+    
+    .all .dashboard-content .col-md-3 { width: 21.5%; margin-left: 2.5% }
+    
+    .panel , .myprogress-content , .above-content {
+        margin-left: 10px; margin-right: 10px; }
+        
+    .above-content { margin-top: 20px }
+    
+    .myhate-content { margin-left: 10px }
+    
+    .popular-brand , .popular-follow { width: 49%}
+    
+    .popular-brand { margin-right: 1.5% }
+    
+    .Team .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content textarea { width: 260px } 
+    
+    .all .dashboard-content .mytitle h2 , .product .mytitle h2 ,
+    .product .mytitle h2 { font-size: 20px }
+    #imgavatar {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        margin-left: 70px;
+    }
+    
+}
+
+/* *************************************************************** */ 
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .Team .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content textarea { width: 400px } 
+    
+}
+
+/* *************************************************************** */ 
+
+@media (min-width: 1200px) {
+    
+    .Team .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content .colored ~ td input[type="text"] ,
+    .vendor .vendor-edit-content textarea { width: 400px } 
+}
+
+
+/* **************************************************************** */
+
+@media (max-width: 991px) {
+    .footer.col-xs-offset-2 { margin-right: 25% }
+    .footer.col-xs-10 { width: 75% } 
+}
+
+@media (max-width: 700px) {
+    .footer p { font-size: 13px}
+    .footer a {font-weight: normal} 
+}
+
+
+@media (max-width: 480px) {
+    .footer.col-xs-offset-2 { margin-right: 12% }
+    .footer.col-xs-10 { width: 88% } 
+    .footer a { display: block;margin-top: 25px;text-align: center }    
+}
+
+@media (max-width: 400px) { .notifications { left: -3% } }

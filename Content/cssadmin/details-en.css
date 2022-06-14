@@ -1,0 +1,132 @@
+h1, h2, h3, h4, h5, .lead , p {font-family: 'Droid Sans', sans-serif }
+
+body { font-family: 'Droid Sans', sans-serif;overflow-x: hidden }
+
+/* ************************************** */
+
+.details { margin-top: 100px }
+
+.details .table > tbody > tr > td:first-of-type  {
+    width: 15%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.details .table > tbody > tr > td:nth-of-type(2)  {
+    width: 30%;
+    padding: 0
+}
+
+.details .table > tbody > tr > td:nth-of-type(3)  {
+    width: 40%;
+}
+ 
+.details .table > tbody > tr > td:nth-of-type(4) ,
+.details .table > tbody > tr > td:nth-of-type(5) {
+    width: 7.5%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.details .table>caption+thead>tr:first-child>td,
+.details .table>caption+thead>tr:first-child>th,
+.details .table>colgroup+thead>tr:first-child>td,
+.details .table>colgroup+thead>tr:first-child>th,
+.details .table>thead:first-child>tr:first-child>td, 
+.details .table>thead:first-child>tr:first-child>th {
+    padding-top: 4px;
+    padding-bottom: 12px;
+    text-align: center
+}
+
+
+#my-tabs7 { margin-left: 20px;margin-bottom: 0 }
+
+#my-tabs7 li { 
+    display: inline-block;
+    padding: 10px;
+    background-color: #337AB7;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #FFF
+}
+
+#my-tabs7 li:nth-of-type(1) { 
+    border-top-left-radius: 6px;
+    border-right: 1px solid #FFF 
+}
+
+#my-tabs7 li:nth-of-type(2) { margin-left: -4px;border-top-right-radius: 6px }
+
+#my-tabs7 li.In-active { 
+    background-color: rgba(51,122,183,.7);
+    border-bottom: 1px solid #FFF
+}
+
+
+.details .vendor-edit-content input[type="text"] {  
+    border: 1px solid #dad9d9;
+    height: 34px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    width: 315px
+}
+
+.details .vendor-edit-content textarea , .details .vendor-edit-content input[type="text"] {
+    margin-left: 10px 
+}
+
+.details .vendor-edit-content textarea { resize: none;width: 315px }
+
+.details .vendor-edit-content .btn-primary { margin-bottom: 50px }
+
+.details .vendor-edit-content { margin-bottom: 50px }
+
+
+.details .panel {
+    margin-top: 0;
+    margin-left: 4px;
+    margin-right: 6px;
+    border-radius: 6px;
+}
+
+.details .my-panel , .details .vendor-edit-content {
+    background-color: #337AB7;
+    padding: 1em;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 35px;
+    overflow: hidden;
+}
+
+.details .panel-default > .panel-heading {
+    color: #FFF;
+    background-color: #4cae4c;
+}
+
+.details .colored { color: #FFF }
+
+.details .vendor-edit-content .btn { margin-bottom: 20px }
+
+.details .table > tbody > tr > td:nth-of-type(1) img { 
+    width: 150px;height: 150px;
+    margin-left: 20px;
+    border: 1px solid #EEE
+}
+
+.details .table > tbody > tr > td:nth-of-type(2) img { 
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #DDD
+}
+
+.details .under { margin-bottom: 10px !important }
+
+.details .vendor-edit-content textarea { margin-bottom: 25px }

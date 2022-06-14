@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="aboutaboutus" xml:space="preserve">
+    <value>معلومات عنــا</value>
+  </data>
+  <data name="aboutcompany" xml:space="preserve">
+    <value>عن الشركة مجموعة التجار العرب</value>
+  </data>
+  <data name="abouthowwedo" xml:space="preserve">
+    <value>كيـــــف نعمـــل</value>
+  </data>
+  <data name="aboutus" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="aboutusauthor" xml:space="preserve">
+    <value>مجموعة التجار العرب</value>
+  </data>
+  <data name="aboutustab1" xml:space="preserve">
+    <value>تقديم وتعريف شركة التجار العرب للتجارة</value>
+  </data>
+  <data name="aboutustab1paragraph" xml:space="preserve">
+    <value>تأسست شركة التجار العرب للتجارة ش.م.م المتخصصة في تسويق وتصنيع البقوليات والغلال والأرز  وجميع المحاصيل الزراعية للأستيراد والتصدير وتتميز الشركة بموقعها في وسط الدلتا وكما تتميز مصانع الشركة ومضاربها بأحدث المعدات والألات الحديثة وبشهادة خبراء من أهم الشركات العالمية حيث قدرتها علي تجهيز وتصدير لا يقل عن 100000الف طن من منتجاتها وتوجد مساحة تخزين لكل صنف لاستيعاب لا يقل عن 5000الي 10000 طن للصنف الواحد وصوامع مجهزة للتخزين الصب سواء من القمح والأرز الشعير والأرز العريض وتوجد ايضا محطات لفرز وتعبئة جميع البقوليات إلكترونيا</value>
+  </data>
+  <data name="aboutustab2" xml:space="preserve">
+    <value>تقديم وتعريف شركة التجار العرب للتجارة</value>
+  </data>
+  <data name="aboutustab2paragraph" xml:space="preserve">
+    <value>وتعمل شركة التجار العرب للعمل علي تحديث أحدث وسائل التنقية الحديثة وإضافة كل ماهو جديد في مجالات الشركة لإرضاء وكسب ثقة عملائها والحفاظ الدائم والمستمر للأسواق سواء الداخلية والخارجية وتتعامل الشركة  سواء للاستيراد والتصدير للأكثر من 46 دولة ولموقعها الجغرافي والأقتصادي القادر للوصول براً وبحراً بسهولة ولموقع موانيها ومناطقها الحرة أصبحت تتنافس وبقوة في الأسواق الأوربية والعربية  ودول أفريقيا وتعمل شركة التجار العرب دائماً في تقدم وتطوير مستمر</value>
+  </data>
+  <data name="aboutustab3" xml:space="preserve">
+    <value>رؤيتنا ومهمتنا</value>
+  </data>
+  <data name="aboutustab3paragraph" xml:space="preserve">
+    <value>نسعي أن نكون دائما في جمهورية مصر العربية بكل منتجاتنا إلي السعي دائماً إلي ما هو أفضل ولتكوين فكر وأنطباع عن الشركة يحتزي به في الداخل والخارج وتحقيق مبادئ الكفاءة والتنظيم والجودة والانضباط  لنكون دائماً جديرين بحسن ثقة عملائنا والاسواق المحيطة بنا ومساهمتنا دائما لخدمة المستهلك وإرضائه و رؤية ورسالة التجار العرب للتجارة وهي تطوير الاستراتيجيات الواجب إتباعها وهو امر ضروري وهام  يقع علي عاتق جميع العاملين وعلي جميع المديريين التنفذيين وهذة القيم التي لا غني عنها قاعدة اساسية ونظام في أسلوب العمل  مع عملائنا النقطة المحورية لجميع الأنشطة والمجالات الهادفة لنا ودائما مانسعي إلي تزويد عملائنا بكل سبل الراحة والاطمئنان .</value>
+  </data>
+  <data name="aboutwhoweare" xml:space="preserve">
+    <value>من نحــن</value>
+  </data>
+  <data name="addteam" xml:space="preserve">
+    <value>اضافة موظف</value>
+  </data>
+  <data name="addtocart" xml:space="preserve">
+    <value>أضافة الى عربة التسوق</value>
+  </data>
+  <data name="agreeterms" xml:space="preserve">
+    <value>أوافق على سياسة الشروط</value>
+  </data>
+  <data name="alreadyhaveaccount" xml:space="preserve">
+    <value>لديك حساب بالفعل                               </value>
+  </data>
+  <data name="applet" xml:space="preserve">
+    <value>أبلت سوفت وير</value>
+  </data>
+  <data name="arabtradersgroup" xml:space="preserve">
+    <value>مجموعة التجار العرب</value>
+  </data>
+  <data name="backhome" xml:space="preserve">
+    <value>العودة للصفحة الرئيسية</value>
+  </data>
+  <data name="btnaddproduct" xml:space="preserve">
+    <value>أضف</value>
+  </data>
+  <data name="btneditabout" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="btnsaveproduct" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="btnsignup" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="btnviewmore" xml:space="preserve">
+    <value>رؤيــة المزيـــد</value>
+  </data>
+  <data name="changelanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="companyproducts" xml:space="preserve">
+    <value>منتجــات التجــار العـرب</value>
+  </data>
+  <data name="companyteam" xml:space="preserve">
+    <value>الموظفيين</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="contactus" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="contactusleavemessage" xml:space="preserve">
+    <value>اترك رسالتك هنا</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>جميع الحقوق محفوظة شركة</value>
+  </data>
+  <data name="country" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="cssbootstrap" xml:space="preserve">
+    <value>/Content/cssadmin/bootstrap.min-ar.css</value>
+  </data>
+  <data name="cssbootstrapRTL" xml:space="preserve">
+    <value>/Content/cssadmin/bootstrapRtl-ar.css</value>
+  </data>
+  <data name="cssbootstrapu" xml:space="preserve">
+    <value>/Content/css/bootstrap-ar.css</value>
+  </data>
+  <data name="csscontact" xml:space="preserve">
+    <value>/Content/cssadmin/contacts-ar.css</value>
+  </data>
+  <data name="cssdetails" xml:space="preserve">
+    <value>/Content/cssadmin/details-ar.css</value>
+  </data>
+  <data name="cssfaq" xml:space="preserve">
+    <value>/Content/cssadmin/faq-ar.css</value>
+  </data>
+  <data name="cssflaticonu" xml:space="preserve">
+    <value>/Content/css/flaticon-ar.css</value>
+  </data>
+  <data name="cssfont" xml:space="preserve">
+    <value>https://fontlibrary.org/face/droid-arabic-kufi</value>
+  </data>
+  <data name="cssfontawesome" xml:space="preserve">
+    <value>/Content/cssadmin/font-awesome.min-ar.css</value>
+  </data>
+  <data name="cssfontu" xml:space="preserve">
+    <value>http://fonts.googleapis.com/earlyaccess/droidarabickufi.css</value>
+  </data>
+  <data name="cssgallery" xml:space="preserve">
+    <value>/Content/cssadmin/gallery-ar.css</value>
+  </data>
+  <data name="csshover" xml:space="preserve">
+    <value>/Content/cssadmin/hover-min-ar.css</value>
+  </data>
+  <data name="cssmanager" xml:space="preserve">
+    <value>/Content/cssadmin/manger-ar.css</value>
+  </data>
+  <data name="cssmedia" xml:space="preserve">
+    <value>/Content/cssadmin/media-ar.css</value>
+  </data>
+  <data name="cssmedia2" xml:space="preserve">
+    <value>/Content/cssadmin/media2-ar.css</value>
+  </data>
+  <data name="cssproduct" xml:space="preserve">
+    <value>/Content/cssadmin/product-ar.css</value>
+  </data>
+  <data name="cssresponsiveu" xml:space="preserve">
+    <value>/Content/css/responsive-ar.css</value>
+  </data>
+  <data name="cssrevolutionu" xml:space="preserve">
+    <value>/Content/css/revolution-slider-ar.css</value>
+  </data>
+  <data name="csssignup" xml:space="preserve">
+    <value>/Content/cssadmin/singUp-ar.css</value>
+  </data>
+  <data name="csssignupfonts" xml:space="preserve">
+    <value>https://fontlibrary.org/face/droid-arabic-kufi</value>
+  </data>
+  <data name="cssstyle" xml:space="preserve">
+    <value>/Content/cssadmin/style-ar.css</value>
+  </data>
+  <data name="cssstyleu" xml:space="preserve">
+    <value>/Content/css/style-ar.css</value>
+  </data>
+  <data name="cssteam" xml:space="preserve">
+    <value>/Content/cssadmin/team-ar.css</value>
+  </data>
+  <data name="dashboard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="dashboardlocation" xml:space="preserve">
+    <value>المنصورة -مصر</value>
+  </data>
+  <data name="dashboardtime" xml:space="preserve">
+    <value>الوقت الحالى فى </value>
+  </data>
+  <data name="dashboardweather" xml:space="preserve">
+    <value>حالة الطقس بالمنصورة</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="DateTimeModel" xml:space="preserve">
+    <value>تاريخ النشر</value>
+  </data>
+  <data name="DescriptionModel" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="EmployeeCountryModel" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="EmployeeDateTimeModel" xml:space="preserve">
+    <value>تاريخ النشر</value>
+  </data>
+  <data name="EmployeeEmailModel" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="EmployeeEmpErrorModel" xml:space="preserve">
+    <value>رسالة الخطأ</value>
+  </data>
+  <data name="EmployeeFirstNameModel" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="EmployeeIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="EmployeeLastNameModel" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="EmployeePhoneNumberModel" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="EmployeePublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="faq" xml:space="preserve">
+    <value>الاسئلة الشائعة</value>
+  </data>
+  <data name="faqadd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="faqanswer" xml:space="preserve">
+    <value>الاجابة</value>
+  </data>
+  <data name="FaqAnswerEnModel" xml:space="preserve">
+    <value>الاجابة باللغة الانجليزية</value>
+  </data>
+  <data name="FaqDateTimeModel" xml:space="preserve">
+    <value>تاريخ النشر</value>
+  </data>
+  <data name="faqdelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="faqedit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="FaqErrorModel" xml:space="preserve">
+    <value>رسالة الخطأ</value>
+  </data>
+  <data name="FaqIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="faqpublisher" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="FaqPublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="faqquestion" xml:space="preserve">
+    <value>السؤال</value>
+  </data>
+  <data name="FaqQuestionEnModel" xml:space="preserve">
+    <value>السؤال باللغة الانجليزية</value>
+  </data>
+  <data name="faqs" xml:space="preserve">
+    <value>الاسئلة الشائعة</value>
+  </data>
+  <data name="FirstNameModel" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="followus" xml:space="preserve">
+    <value>تابعنــا على مواقع التواصل الاجتماعى </value>
+  </data>
+  <data name="footeraddress" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="footeraddressdata" xml:space="preserve">
+    <value>بشبيش- المحلة الكبري-  محافظة الغربيه</value>
+  </data>
+  <data name="footerappletsoftware" xml:space="preserve">
+    <value>تصميم وتطوير شركة ابلت سوفت وير </value>
+  </data>
+  <data name="footercopyright" xml:space="preserve">
+    <value>جميع الحقوق محفوظة مجموعة التجار العرب</value>
+  </data>
+  <data name="footeremail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="footeremailedata" xml:space="preserve">
+    <value>info@arabtradersgroup.com</value>
+  </data>
+  <data name="footerlinks" xml:space="preserve">
+    <value>أهــم الروابــــــط</value>
+  </data>
+  <data name="footerphone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="footerphonedata" xml:space="preserve">
+    <value>20402026005 ,
+20402016006,
+20402026008</value>
+  </data>
+  <data name="gallery" xml:space="preserve">
+    <value>المعرض</value>
+  </data>
+  <data name="galleryadd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="gallerycaption" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="gallerydelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="galleryedit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="galleryimage" xml:space="preserve">
+    <value>الصور</value>
+  </data>
+  <data name="galleryinformation" xml:space="preserve">
+    <value>معلومات الصور</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="ImageModel" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="JobTitleModel" xml:space="preserve">
+    <value>اللقب الوظيفى</value>
+  </data>
+  <data name="keepintouch" xml:space="preserve">
+    <value>كن على اتصال دائم بنا</value>
+  </data>
+  <data name="LastNameModel" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="latestgalleries" xml:space="preserve">
+    <value>معرض الصور مجموعة التجار العرب</value>
+  </data>
+  <data name="latestproducts" xml:space="preserve">
+    <value>احدث المنتجات</value>
+  </data>
+  <data name="lgalleries" xml:space="preserve">
+    <value>أحدث معرض</value>
+  </data>
+  <data name="loginu" xml:space="preserve">
+    <value>تسجيل دخول</value>
+  </data>
+  <data name="logoff" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="lvendors" xml:space="preserve">
+    <value>أحدث التجار</value>
+  </data>
+  <data name="lvendorsdata" xml:space="preserve">
+    <value>التجار</value>
+  </data>
+  <data name="manager" xml:space="preserve">
+    <value>المدير</value>
+  </data>
+  <data name="manageradd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="managerdelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="managerdescription" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="manageredit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="ManagerErrorModel" xml:space="preserve">
+    <value>رسالة الخطأ</value>
+  </data>
+  <data name="managerfname" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="ManagerIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="managerimage" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="managerlname" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="managerposition" xml:space="preserve">
+    <value>المكانة</value>
+  </data>
+  <data name="managers" xml:space="preserve">
+    <value>الادارة</value>
+  </data>
+  <data name="managersdata" xml:space="preserve">
+    <value>الادارة</value>
+  </data>
+  <data name="managerslatest" xml:space="preserve">
+    <value>المديرين</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="newfaq" xml:space="preserve">
+    <value>اضافة سؤال</value>
+  </data>
+  <data name="newmanager" xml:space="preserve">
+    <value>اضافة مدير</value>
+  </data>
+  <data name="newopen" xml:space="preserve">
+    <value>منتج</value>
+  </data>
+  <data name="newphoto" xml:space="preserve">
+    <value>اضافة صورة</value>
+  </data>
+  <data name="newproduct" xml:space="preserve">
+    <value>اضافة منتج</value>
+  </data>
+  <data name="newsletter" xml:space="preserve">
+    <value>القائمة البريدية</value>
+  </data>
+  <data name="newvendor" xml:space="preserve">
+    <value>اضافة تاجر</value>
+  </data>
+  <data name="onhold" xml:space="preserve">
+    <value>تاجــر</value>
+  </data>
+  <data name="orloginwith" xml:space="preserve">
+    <value>أو تسجيل الدخول باستخدام</value>
+  </data>
+  <data name="ourexport" xml:space="preserve">
+    <value>التصديـــر</value>
+  </data>
+  <data name="ourexportparagraph" xml:space="preserve">
+    <value>وتتميز أنشطة التصدير لدينا مع نوعية جيدة جدا والتعبئة على شكل لطيف
+نحن دائما نشحن بضائعنا بالضبط وفقا للمواصفات
+المتفق عليها مع عملائنا، وأيضا حريصون على أن تصل لهم لعملائنا كما هو مقرر في الوقت المحدد.</value>
+  </data>
+  <data name="ourimport" xml:space="preserve">
+    <value>الاستـيـــراد</value>
+  </data>
+  <data name="ourimportparagraph" xml:space="preserve">
+    <value>وتشمل أنشطة الاستيراد لدينا مجال مختلف بالإضافة إلى المواد الغذائية
+نحن الشركة الرائدة وأحد أكبر المستوردين من المحاصيل الزراعية
+تختص هذه الشعبة بتلبية احتياجات السوق المحلية بجميع أنواع المحاصيل الزراعية .
+نحن نستورد من الهند، ماليزيا، الصين، تايلاند وبلدان أخرى.</value>
+  </data>
+  <data name="ourmanagers" xml:space="preserve">
+    <value>فريـــق عمــل التـجــــار العــــرب</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>رقم التليفون</value>
+  </data>
+  <data name="PhotoCaptionArModel" xml:space="preserve">
+    <value>عنوان الصورة باللغة العربية</value>
+  </data>
+  <data name="PhotoCaptionEnModel" xml:space="preserve">
+    <value>عنوان الصورة باللغة الانجليزية</value>
+  </data>
+  <data name="PhotoDateTimeModel" xml:space="preserve">
+    <value>تاريخ الصورة</value>
+  </data>
+  <data name="PhotoErrorModel" xml:space="preserve">
+    <value>رسالة الخطأ</value>
+  </data>
+  <data name="photogallery" xml:space="preserve">
+    <value>معرض الصور</value>
+  </data>
+  <data name="PhotoIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="PhotoPathModel" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="PhotoPublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="placholderemail" xml:space="preserve">
+    <value>ادخل بريدك الالكترونى</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>منتجاتنا</value>
+  </data>
+  <data name="productalbum" xml:space="preserve">
+    <value>صور المنتجات</value>
+  </data>
+  <data name="ProductDateTimeModel" xml:space="preserve">
+    <value>تاريخ المنتج</value>
+  </data>
+  <data name="productdelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ProductDescriptionArModel" xml:space="preserve">
+    <value>وصف المنتج باللغةالعربية</value>
+  </data>
+  <data name="ProductDescriptionEnModel" xml:space="preserve">
+    <value>وصف المنتج باللغة الانجليزية</value>
+  </data>
+  <data name="productdetails" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="productedit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="ProductErrorModel" xml:space="preserve">
+    <value>رسالة المنتج</value>
+  </data>
+  <data name="ProductIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="productimage" xml:space="preserve">
+    <value>الصوره</value>
+  </data>
+  <data name="ProductImageModel" xml:space="preserve">
+    <value>صورة المنتج</value>
+  </data>
+  <data name="productinformation" xml:space="preserve">
+    <value>معلومات المنتجات</value>
+  </data>
+  <data name="productname" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="ProductNameArModel" xml:space="preserve">
+    <value>اسم المنتج باللغة العربية</value>
+  </data>
+  <data name="ProductNameEnModel" xml:space="preserve">
+    <value>اسم المنتج باللغة الانجليزية</value>
+  </data>
+  <data name="productowner" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="ProductPublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="productquantity" xml:space="preserve">
+    <value>الكميه</value>
+  </data>
+  <data name="ProductQuantityModel" xml:space="preserve">
+    <value>كمية المنتج</value>
+  </data>
+  <data name="products" xml:space="preserve">
+    <value>المنتجات </value>
+  </data>
+  <data name="PublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="pull" xml:space="preserve">
+    <value>pull-left</value>
+  </data>
+  <data name="RegisterConfirmpassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="RegisterEmail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="RegisterFirstName" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="RegisterLastName" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="relatedproducts" xml:space="preserve">
+    <value>منتجات ذات صلة </value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>بحث.....</value>
+  </data>
+  <data name="seeproductdetails" xml:space="preserve">
+    <value>تفاصيل المنتج</value>
+  </data>
+  <data name="sendnow" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="shipping" xml:space="preserve">
+    <value>مديــر</value>
+  </data>
+  <data name="signupnow" xml:space="preserve">
+    <value>ليس عضوا؟ أفتح حساب الأن</value>
+  </data>
+  <data name="slidercompanyname" xml:space="preserve">
+    <value>مجموعة التجار العرب</value>
+  </data>
+  <data name="sliderh2" xml:space="preserve">
+    <value> جودة عالية ، بتطوير مستمر وبأسعار تنافسية مع الحفاظ على الأمان البيئى</value>
+  </data>
+  <data name="sliderh3" xml:space="preserve">
+    <value>نحن نعمل في مجال تصدير الفواكه والخضراوات والبقوليات</value>
+  </data>
+  <data name="sliderh3br" xml:space="preserve">
+    <value>قمنا بالتصدير إلى بلدان مختلفة في أوروبا مثل المملكة المتحدة، هولندا، ايطاليا وغيرها</value>
+  </data>
+  <data name="sliderh3slide3" xml:space="preserve">
+    <value>نقوم بتصدير بضائعنا الى ماليزيا وسنغافورة وبعض الدول العربية في آسيا</value>
+  </data>
+  <data name="stayupdate" xml:space="preserve">
+    <value>اشترك معنا في القائمة البريدية ليصلك كل جديد</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>الموضوع</value>
+  </data>
+  <data name="team" xml:space="preserve">
+    <value>الفريق</value>
+  </data>
+  <data name="teamadd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="teambtnadd" xml:space="preserve">
+    <value>اضف</value>
+  </data>
+  <data name="teambtnsave" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="teamcountry" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="teamdelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="teamedit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="teamemail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="teamfname" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="teamlatest" xml:space="preserve">
+    <value>اعضاء الفريق</value>
+  </data>
+  <data name="teamlname" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="teamphone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="testimonial1author" xml:space="preserve">
+    <value>ستيفن دى</value>
+  </data>
+  <data name="testimonial1paragraph" xml:space="preserve">
+    <value>لم يكن لدي شركة على استعداد لذلك حيث تتأكد من أن المهمة تم القيام بها بشكل تام . مراقبة الجودة التي هي في المقام الاول  هذه الشهادة هي من المقاول السابق والمشرف الذي يعرف نوعية عندما يرى ذلك. شكرا مجموعة التجار العرب من قلوب قلبي.</value>
+  </data>
+  <data name="testimonial1role" xml:space="preserve">
+    <value>مدير تنفيذى</value>
+  </data>
+  <data name="testimonial2author" xml:space="preserve">
+    <value>بيل كاى</value>
+  </data>
+  <data name="testimonial2paragraph" xml:space="preserve">
+    <value>مجموعة التجار العرب هي واحدة من أفضل الشركات المتخصصة في مجال استيراد وتصدير المحاصيل الزراعية. انها دائما حريصة على ثقة العملاء وإجراء عملية الأعمال بكفاءة</value>
+  </data>
+  <data name="testimonial2role" xml:space="preserve">
+    <value>مدير مشروع</value>
+  </data>
+  <data name="testimonial3author" xml:space="preserve">
+    <value>جون بى</value>
+  </data>
+  <data name="testimonial3paragraph" xml:space="preserve">
+    <value>عزيزي عمرو، لا بد لي من القول أنا مسرور جدا مع التجار العرب . بل هو نعمة حقيقية أن يكون هناك  للشركة التي ليست  فقط لأخذ المال.
+  لقد أوصيت بالفعل لك عدة أشخاص. أنا على ثقة شركتك أن تفعل الشيء الصحيح. اتمنى لك يوم جميل.</value>
+  </data>
+  <data name="testimonial3role" xml:space="preserve">
+    <value>مدير مبيعات</value>
+  </data>
+  <data name="testimonial4author" xml:space="preserve">
+    <value>سعد محمد</value>
+  </data>
+  <data name="testimonial4paragraph" xml:space="preserve">
+    <value>مجموعة التجار العرب هي واحدة من أجمل الشركات التي تعاملت معها لأنها ساعدتني في عملية الشحن والدفع، والتعامل معها كان مرنا بما فيه الكفاية من قلبي. أحترم
+هذه الشركة.</value>
+  </data>
+  <data name="testimonial4role" xml:space="preserve">
+    <value>مدير مالى </value>
+  </data>
+  <data name="ufaq" xml:space="preserve">
+    <value>الاسئلة الشائعة</value>
+  </data>
+  <data name="ugallery" xml:space="preserve">
+    <value>الصور</value>
+  </data>
+  <data name="unpaid" xml:space="preserve">
+    <value>موظــف</value>
+  </data>
+  <data name="UserEmail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="UserPassword" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="UserRememberme" xml:space="preserve">
+    <value>تذكرنى</value>
+  </data>
+  <data name="vendor" xml:space="preserve">
+    <value>التجار</value>
+  </data>
+  <data name="vendoradd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="vendorbtnadd" xml:space="preserve">
+    <value>أضف</value>
+  </data>
+  <data name="vendorbtnsave" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="vendorcompany" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="VendorCompanyEmailModel" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="VendorCompanyNameModel" xml:space="preserve">
+    <value>اسم الشركة</value>
+  </data>
+  <data name="vendorcountry" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="VendorCountryModel" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="VendorDateTimeModel" xml:space="preserve">
+    <value>تاريخ النشر</value>
+  </data>
+  <data name="vendordelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="vendoredit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="vendoremail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="VendorErrorModel" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="VendorIdModel" xml:space="preserve">
+    <value>الرقم المحدد</value>
+  </data>
+  <data name="vendormanager" xml:space="preserve">
+    <value>المدير</value>
+  </data>
+  <data name="VendorManagerNameModel" xml:space="preserve">
+    <value>اسم المدير</value>
+  </data>
+  <data name="vendorphone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="VendorPhoneNumberModel" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="VendorPublisherModel" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="vendors" xml:space="preserve">
+    <value>التجار الحاليين</value>
+  </data>
+  <data name="vieworders" xml:space="preserve">
+    <value>إحصائيات</value>
+  </data>
+  <data name="welcomourcompany" xml:space="preserve">
+    <value>أهلاً و مرحباً بكم في شركة التجار العرب</value>
+  </data>
+  <data name="FaqAnswerArModel" xml:space="preserve">
+    <value>الاجابة باللغة العربية</value>
+  </data>
+  <data name="FaqQuestionArModel" xml:space="preserve">
+    <value>السؤال باللغة العربية</value>
+  </data>
+  <data name="footerfax" xml:space="preserve">
+    <value>فاكس</value>
+  </data>
+  <data name="footerfaxedata" xml:space="preserve">
+    <value>20402026007</value>
+  </data>
+</root>

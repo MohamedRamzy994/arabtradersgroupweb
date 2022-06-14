@@ -1,0 +1,81 @@
+h1, h2, h3, h4, h5, .lead , p {font-family: 'Droid Sans', sans-serif }
+
+body { font-family: 'Droid Sans', sans-serif;overflow-x: hidden }
+
+/* ************************************** */
+
+body { background-color: #fff; }
+
+.contacts { overflow: hidden }
+
+.contact-first { margin-top: 100px }
+
+.contact-second , .contact-third , .contact-four { margin-top: 50px }
+
+.contact-four { margin-bottom: 50px }
+
+#new { margin-top: 50px;margin-bottom: 50px }
+
+#new2 { margin-bottom: 50px;margin-top: 50px }
+
+.mybutton .btn-default , .mybutton2 .btn-default {
+    width: 100px;
+    height: 38px;
+    margin-right: 10px;
+    font-size: 18px;
+    outline: none
+}
+
+.mybutton2 .btn-default {
+    width: 120px;
+    height: 44px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    border: 1px solid #777
+}
+
+
+.contacts .input-lg {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 35px;
+    outline: none;
+    font-size: 13px
+}
+
+
+.contacts .form-content { position: relative }
+
+.contacts .form-content span {
+    
+    position: absolute;
+    background-color: #333;
+    color: #FFF;
+    height: 35px;
+    width: 30px;
+    top: 0px;
+    left: -20px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    line-height: 35px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+} 
+
+
+.contacts .myForm {
+    background-color: #CCC;
+    padding: 3em 4em;
+    border-radius: 5px;
+}
+
+.contacts textarea { 
+    width: 100%;
+    margin-left: 0;
+    height: 180px;
+    resize: none;
+    background-color: #FFF;
+}
+
+/*.all .left-side .search { margin-bottom: 0; }*/

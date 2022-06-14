@@ -1,0 +1,296 @@
+﻿@using ArabTradersGroup.Models
+@model DashboardViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Index";
+    ViewBag.Index = "MYACTIVE";
+}
+
+<!-- --------------------------------------------------- -->
+
+<div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9 right-side">
+
+    <div class="row">
+
+        <div class="dashboard-content">
+
+            <div class="mytitle">
+                <h2 class="text-left">
+                    <a href="@Url.Action("Index","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.dashboard</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Product","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.products</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Vendor","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.vendor</a>
+                    <span>/</span>
+                    <a href="@Url.Action("Team","Dashboard",null)">@ArabTradersGroup.App_LocalResources.ATG.team</a>
+                </h2>
+            </div>
+
+            <div class="first col-md-3 col-sm-6">
+
+                <div class="second-content">
+                    <i class="fa fa-shopping-cart icon "></i>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@Model.SystemProducts</span>
+                    <div class="clearfix"></div>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@ArabTradersGroup.App_LocalResources.ATG.newopen</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="second-white">
+                    <p>@ArabTradersGroup.App_LocalResources.ATG.vieworders</p>
+                    <p> <i class="fa fa-arrow-circle-right"></i> </p>
+                </div>
+
+            </div>
+
+            <!-- End First -->
+
+
+            <div class="second col-md-3 col-sm-6">
+
+                <div class="second-content">
+                    <i class="fa fa-users icon"></i>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@Model.SystemEmployees</span>
+                    <div class="clearfix"></div>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@ArabTradersGroup.App_LocalResources.ATG.unpaid</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="second-white">
+                    <p>@ArabTradersGroup.App_LocalResources.ATG.vieworders</p>
+                    <p> <i class="fa fa-arrow-circle-right"></i> </p>
+                </div>
+
+            </div>
+
+            <!-- End Second -->
+
+            <div class="third col-md-3 col-sm-6">
+
+                <div class="second-content">
+                    <i class="fa fa-user-secret icon"></i>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@Model.SystemManagers</span>
+                    <div class="clearfix"></div>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@ArabTradersGroup.App_LocalResources.ATG.shipping</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="second-white">
+                    <p>@ArabTradersGroup.App_LocalResources.ATG.vieworders</p>
+                    <p> <i class="fa fa-arrow-circle-right"></i> </p>
+                </div>
+
+            </div>
+            <!-- End Third -->
+
+            <div class="four col-md-3 col-sm-6">
+
+                <div class="second-content">
+                    <i class="fa fa-user-times icon "></i>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@Model.SystemVendors</span>
+                    <div class="clearfix"></div>
+                    <span class="@ArabTradersGroup.App_LocalResources.ATG.pull">@ArabTradersGroup.App_LocalResources.ATG.onhold</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="second-white">
+                    <p>@ArabTradersGroup.App_LocalResources.ATG.vieworders</p>
+                    <p> <i class="fa fa-arrow-circle-right"></i> </p>
+                </div>
+
+            </div>
+
+            <!-- End Four -->
+
+        </div>
+        <!-- End dashboard-content -->
+
+    </div>
+    <!-- End Row -->
+    <!-- --------------------------------------------------- -->
+
+    <div class="row">
+
+        <div class="col-xs-12">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">@ArabTradersGroup.App_LocalResources.ATG.lvendors</div>
+
+                <div style="padding:10px" class="btn-block">
+
+                    <div class="xpanel-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr style="cursor:pointer">
+                                        <th>@ArabTradersGroup.App_LocalResources.ATG.company</th>
+                                        <th>@ArabTradersGroup.App_LocalResources.ATG.manager</th>
+                                        <th>@ArabTradersGroup.App_LocalResources.ATG.email</th>
+
+                                        <th>@ArabTradersGroup.App_LocalResources.ATG.phone</th>
+                                        <th>@ArabTradersGroup.App_LocalResources.ATG.date</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var item in Model.LatestVendors)
+                                    {
+
+
+                                        <tr style="cursor:pointer">
+                                            <td>@Html.DisplayFor(m => item.Vendor_Company)</td>
+
+
+                                            <td>@Html.DisplayFor(m => item.Vendor_Manager)</td>
+                                            <td>@Html.DisplayFor(m => item.Vendor_Email)</td>
+                                            <td>@Html.DisplayFor(m => item.Vendor_Phone)</td>
+                                            <td>@Html.DisplayFor(m => item.Vendor_StartDateTime)</td>
+
+                                        </tr>
+
+
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+
+                    <a href="@Url.Action("Vendor","Dashboard")" class="btn btn-default btn-block">
+                        View All Vendors
+                    </a>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- --------------------------------------------------- -->
+    <!-- --------------------------------------------------- -->
+
+    <div class="row">
+        <!-- End myprogress -->
+        <!-- Start above -->
+
+        @foreach (var item in Model.TopManagers)
+        {
+            <div class="col-md-4 above">
+
+                <div class="above-content">
+
+                    <div class="background-img"></div>
+
+                    <img src="@Url.Content("/Images/imagesadmin/managersresized/"+item.Manager_Image)" class="img img-thumbnail" style="width:40%;height:100px;">
+                    @{
+
+                        ATGEntities Context = new ATGEntities();
+                        string Fname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Fname;
+                        string Lname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Lname;
+
+                        string Owner = Fname + " " + Lname;
+
+                        item.Manager_Fname = Owner;
+
+
+
+                    }
+
+
+
+                    <p class="text-center">@Html.DisplayFor(m => item.Manager_Fname)</p>
+                    <p class="text-center">@Html.DisplayFor(m => item.Manager_Position)</p>
+
+                    <ul class="social-icons">
+                        <li>
+
+                            @ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup
+                            @*<a href="#">
+                                <i class="fa fa-facebook"> </i>
+                                <div class="tooltip"><span>Facebook</span></div>
+                            </a>*@
+                        </li>
+                        @*<li>
+                            <a href="#">
+                                <i class="fa fa-twitter"> </i>
+                                <div class="tooltip"><span>Twitter</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"> </i>
+                                <div class="tooltip"><span>Google</span></div>
+                            </a>
+                        </li>*@
+                    </ul>
+
+                </div>
+                <!-- End above-content -->
+
+            </div>
+        }
+
+
+    </div>
+    <!-- End Row -->
+    <!-- ----------------------------------------------- -->
+
+    <div class="row big-row">
+
+        <div class="climate col-md-6 col-sm-6">
+
+            <!-- Start climate-content -->
+            <div class="climate-content" style="padding-top:30px;">
+
+                <!-- Start climate-top -->
+              
+                <!-- End climate-top -->
+                <!-- Start climate-bottom -->
+                <div class="climate-bottom">
+                    <div class="row">
+
+                        <a class="weatherwidget-io" href="https://forecast7.com/en/30d0431d24/cairo/" data-label_1="Mansoura" data-label_2="WEATHER" data-theme="original">Mansoura WEATHER</a>
+                        <script>
+                            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://weatherwidget.io/js/widget.min.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "weatherwidget-io-js");
+                        </script>
+
+
+                    </div>
+                </div>
+                <!-- End climate-bottom -->
+
+            </div>
+            <!-- End climate-content -->
+
+        </div>
+        <!-- Start climate -->
+        <!-- Start hate -->
+        <div class="hate col-md-6 col-sm-6">
+            <div class="myhate-content">
+                <div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/360761"><span style="color:gray;">@ArabTradersGroup.App_LocalResources.ATG.dashboardtime</span><br /> @ArabTradersGroup.App_LocalResources.ATG.dashboardlocation</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Africa%2FCairo" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+            </div>
+        </div>
+        <!-- End hate -->
+        <!-- End Col -->
+
+    </div>
+    <!-- End Row -->
+
+</div>
+<!-- End right-side -->
+<!-- --------------------------------------------------- -->
+
+@section scripts{
+
+
+}

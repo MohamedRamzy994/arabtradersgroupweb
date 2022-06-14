@@ -1,0 +1,193 @@
+.h1 , h2 , h3 , h4 , h5 , .lead , p { font-family: 'Droid Sans', sans-serif;  }
+
+
+body {
+    font-family: 'DroidArabicKufiRegular',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/* ************************************** */
+
+.Team .vendor-edit-content , .Team .my-panel ,
+.vendor .vendor-edit-content , .vendor .my-panel { 
+    overflow: hidden;
+    padding: 1em;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 6px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    border-top-right-radius: 0px;
+}
+
+.Team .colored , .vendor .colored {color: #FFF }
+
+#my-tabs2 , #my-tabs3 { margin-right: 20px;margin-bottom: 0 }
+
+#my-tabs2 li , #my-tabs3 li { 
+    display: inline-block;
+    padding: 10px;
+    background-color: #EEE;
+    color: #777;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0;
+    font-weight: 600;
+}
+
+#my-tabs2 li:nth-of-type(1) , #my-tabs3 li:nth-of-type(1) { 
+    border-top-right-radius: 6px;
+    border-left: 1px solid #FFF;
+    border: 1px solid #CCC;
+    border-bottom: 0;
+}
+
+#my-tabs2 li:nth-of-type(2) , #my-tabs3 li:nth-of-type(2) { 
+    margin-right: -4px;
+    border-top-left-radius: 6px;
+    border: 1px solid #CCC;
+    border-bottom: 0;
+}
+
+#my-tabs2 li.In-active , #my-tabs3 li.In-active { background-color: #DDD }
+
+.Team .table>tbody>tr>td, .table>tbody>tr>th, 
+.Team .table>tfoot>tr>td, .table>tfoot>tr>th,
+.Team .table>thead>tr>td, .table>thead>tr>th { 
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 0px;
+    font-size: 15px;
+    padding-bottom: 0;
+    font-weight: 600
+}
+
+.vendor .table>tbody>tr>td, .table>tbody>tr>th, 
+.vendor .table>tfoot>tr>td, .table>tfoot>tr>th,
+.vendor .table>thead>tr>td, .table>thead>tr>th { 
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.Team .table > thead > tr:nth-of-type(1) th ,
+.vendor .table > thead > tr:nth-of-type(1) th { padding: 8px }
+
+.Team  td p , .vendor  td p { 
+    display: inline-flex;text-align: center;padding-top: 13px}
+
+.Team .table>caption+thead>tr:first-child>td,
+.Team .table>caption+thead>tr:first-child>th,
+.Team .table>colgroup+thead>tr:first-child>td,
+.Team .table>colgroup+thead>tr:first-child>th,
+.Team .table>thead:first-child>tr:first-child>td,
+.Team .table>thead:first-child>tr:first-child>th { width: 11.11% }
+
+.vendor .table>caption+thead>tr:first-child>td,
+.vendor .table>caption+thead>tr:first-child>th,
+.vendor .table>colgroup+thead>tr:first-child>td,
+.vendor .table>colgroup+thead>tr:first-child>th,
+.vendor .table>thead:first-child>tr:first-child>td,
+.vendor .table>thead:first-child>tr:first-child>th { width: 11.11% }
+
+
+.Team .panel-default > .panel-heading ,
+.vendor .panel-default > .panel-heading { 
+    color: #777;
+    background-color: #DDD;
+    font-weight: bold;
+    border: 1px solid #CCC;
+}
+
+.Team .my-panel , .vendor .my-panel { 
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    border-top-right-radius: 0px;
+}
+
+
+/* ********************************************************************************** */
+
+.Team .vendor-edit-content , .vendor .vendor-edit-content { 
+    margin-top: 0px;
+    font-size:18px
+}
+
+
+.Team .vendor-edit-content input[type="text"] ,
+.vendor .vendor-edit-content input[type="text"] {  
+    border: 1px solid #dad9d9;
+    height: 34px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.Team .vendor-edit-content select , .vendor .vendor-edit-content select  { 
+    margin-bottom: 20px;
+    border: 1px solid #dad9d9;
+    min-height: 33px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.Team .vendor-edit-content textarea , 
+.vendor .vendor-edit-content textarea { resize: none;width: 315px }
+
+.Team .vendor-edit-content .btn-primary , 
+.vendor .vendor-edit-content .btn-primary { margin-bottom: 50px }
+
+
+.product h2 { margin-top: 50px }
+
+.vendor .vendor-edit-content { margin-bottom: 50px }
+
+/* ********************************************************* */
+
+.product .mytitle h2 { 
+    
+    border-bottom: 2px solid #EEE;
+    display:  inline-block;
+    padding-bottom: 5px;    
+    margin-bottom: 20px;
+    margin-top: 65px;
+}
+
+.Myteam-heading .mytitle h2 a:nth-of-type(4) { color: #000 }
+
+.Myteam-heading .mytitle h2 a:nth-of-type(1) ,
+.Myteam-heading .mytitle h2 a:nth-of-type(2) ,
+.Myteam-heading .mytitle h2 a:nth-of-type(3) { color: #777 }
+
+.Myteam-heading .mytitle h2 a:hover { color: #337ab7 }
+
+
+.Myvendor-heading .mytitle h2 a:nth-of-type(3) { color: #000 }
+
+.Myvendor-heading .mytitle h2 a:nth-of-type(1) ,
+.Myvendor-heading .mytitle h2 a:nth-of-type(2) ,
+.Myvendor-heading .mytitle h2 a:nth-of-type(4) { color: #777 }
+
+.Myvendor-heading.mytitle h2 a:hover { color: #337ab7 }
+
+/* ************************************************** */
+
+label { font-size: 14px }
+
+.vendor .vendor-edit-content input[type="text"],
+.Team .vendor-edit-content input[type="text"]
+{
+    width: 50%;
+    padding-right: 10px
+}
+
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>th { font-size: 12px }
+
+
+
+

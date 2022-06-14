@@ -1,0 +1,178 @@
+﻿@using ArabTradersGroup.Models
+@model ProducstViewModel
+    @using System.Globalization
+@using System.Threading
+@{
+    ViewBag.Title = "ProductDetails";
+    
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.seeproductdetails</h1>
+    </div>
+</section>
+
+
+<!--Shop Single-->
+<div class="shop-single">
+
+
+    @if (CultureInfo.CurrentCulture.Name == "en-US")
+    {
+
+        <!--Product Details Section-->
+        <section class="product-details">
+            <div class="auto-container">
+                <!--Basic Details-->
+                <div class="basic-details">
+                    <div class="row clearfix">
+
+
+
+                        <div class="image-column col-md-4 col-sm-5 col-xs-12">
+                            <figure class="image-box"><a href="@Url.Content("/Images/imagesadmin/products/"+Model.Product.Product_Image)" class="lightbox-image" title="@Model.Product.Product_Name_En"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+Model.Product.Product_Image)" alt=""></a></figure>
+                        </div>
+                        <div class="info-column col-md-8 col-sm-7 col-xs-12">
+                            <div class="details-header">
+                                <h4> @Html.DisplayFor(m => Model.Product.Product_Name_En)</h4>
+
+                            </div>
+
+                            <div class="text">
+
+                                @Html.DisplayFor(m => Model.Product.Product_Description_En)
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div><!--Basic Details-->
+
+            </div>
+        </section>
+
+
+
+    }
+
+    else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+    {
+
+        <!--Product Details Section-->
+        <section class="product-details">
+            <div class="auto-container">
+                <!--Basic Details-->
+                <div class="basic-details">
+                    <div class="row clearfix">
+
+
+
+                        <div class="image-column col-md-4 col-sm-5 col-xs-12">
+                            <figure class="image-box"><a href="@Url.Content("/Images/imagesadmin/products/"+Model.Product.Product_Image)" class="lightbox-image" title="@Model.Product.Product_Name_Ar"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+Model.Product.Product_Image)" alt=""></a></figure>
+                        </div>
+                        <div class="info-column col-md-8 col-sm-7 col-xs-12">
+                            <div class="details-header">
+                                <h4> @Html.DisplayFor(m => Model.Product.Product_Name_Ar)</h4>
+
+                            </div>
+
+                            <div class="text">
+
+                                @Html.DisplayFor(m => Model.Product.Product_Description_Ar)
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div><!--Basic Details-->
+
+            </div>
+        </section>
+
+
+
+
+    }
+
+
+    <!--Related Products-->
+    <section class="related-products">
+        <div class="auto-container">
+            <div class="sec-title-one"><h2>@ArabTradersGroup.App_LocalResources.ATG.relatedproducts</h2></div>
+
+            <div class="row clearfix">
+
+
+                @foreach (var item in Model.RelatedProducts)
+    {
+            if (CultureInfo.CurrentCulture.Name == "en-US")
+{
+
+
+            <!--Default Shop Item-->
+            <div class="default-shop-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="@Url.Content("/Images/imagesadmin/products/" + @item.Product_Image)"><img src="@Url.Content("/Images/imagesadmin/productsresized/" + @item.Product_Image)" alt=""></a></figure>
+                    </div>
+                    <div class="lower-content">
+                        <h3><a href="shop-single.html">@Html.DisplayFor(m => item.Product_Name_En)</a></h3>
+                       
+                    </div>
+
+                    <!--Overlay Box-->
+                    <div class="overlay-box">
+                        <div class="prod-options">
+                            <a class="lightbox-image option-btn" href="@Url.Content("/Images/imagesadmin/products/" + item.Product_Image)" title="@item.Product_Name_En" data-fancybox-group="example-gallery"><span class="fa fa-eye"></span></a>
+                            <a class="option-btn" href="@Url.Action("ProductDetails","Home",new {id=item.Product_Id})"><span class="fa fa-link"></span></a>
+                          
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+
+            <!--Default Shop Item-->
+            <div class="default-shop-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="@Url.Content("/Images/imagesadmin/products/" + @item.Product_Image)"><img src="@Url.Content("/Images/imagesadmin/productsresized/" + @item.Product_Image)" alt=""></a></figure>
+                    </div>
+                    <div class="lower-content">
+                        <h3><a href="shop-single.html">@Html.DisplayFor(m => item.Product_Name_Ar)</a></h3>
+                        <div class="price"><span class="price-txt">@ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup</span></div>
+                    </div>
+
+                    <!--Overlay Box-->
+                    <div class="overlay-box">
+                        <div class="prod-options">
+                            <a class="lightbox-image option-btn" href="@Url.Content("/Images/imagesadmin/products/" + item.Product_Image)" title="@item.Product_Name_Ar" data-fancybox-group="example-gallery"><span class="fa fa-eye"></span></a>
+                            <a class="option-btn" href="@Url.Action("ProductDetails","Home",new {id=item.Product_Id})"><span class="fa fa-link"></span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+}
+
+}
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+</div>
+

@@ -1,0 +1,123 @@
+﻿@using ArabTradersGroup.Models
+@model ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+    ViewBag.Contact = "MYACTIVE";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!-- --------------------------------------------------- -->
+
+<div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9 right-side">
+    <div class="mytitle">
+        <h2></h2>
+
+    </div>
+  
+    @using (Html.BeginForm("Contact", "Dashboard", FormMethod.Post, new { role = "form", id = "ContactForm" }))
+    {
+
+
+        @Html.AntiForgeryToken()
+
+    <div class="row">
+      
+        <div class="contacts contact-second">
+            <div class="mytitle">
+
+
+                @if (Model.Contact_Error != null || !String.IsNullOrEmpty(Model.Contact_Error))
+        {
+            <div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert"><i class="fa fa-close"></i></button>@Html.DisplayFor(m => m.Contact_Error)</div>
+}
+
+
+            </div>
+
+            <div class="myForm col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+
+                <div class="Form-Content">
+
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <div class="form-content">
+                        <span><i class="fa fa-envelope-o"></i></span>
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.Contact_Email, new { @class = "form-control input-lg", placeholder = "Choose Email" })
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <span><i class="fa fa-lock"></i></span>
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.Contact_Phone1, new { @class = "form-control input-lg", placeholder = "Choose Phone1" })
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <span><i class="fa fa-lock"></i></span>
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.Contact_Phone2, new { @class = "form-control input-lg", placeholder = "Choose Phone2" })
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- End Form-Content -->
+
+            </div>
+            <!-- End MyForm -->
+
+        </div>
+        <!-- End contacts -->
+
+    </div>
+        <!-- End Row 2 -->
+        <!-- --------------------------------------------------- -->
+
+
+        <div class="row">
+
+            <div class="contacts contact-third">
+
+                <div class="myForm col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+
+                    <div class="Form-Content">
+
+
+                        <div class="form-content">
+                            <span><i class="fa fa-pencil"></i></span>
+                            <div class="form-group">
+                               @Html.TextBoxFor(m=>m.Contact_Address,new {@class= "form-control input-lg", placeholder="Choose Address" })
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- End Form-Content -->
+
+                </div>
+                <!-- End MyForm -->
+
+            </div>
+            <!-- End contacts -->
+
+        </div>
+        <!-- End Row 3 -->
+        <!-- --------------------------------------------------- -->
+        <!-- ------------------------------------------------ -->
+
+        <div class="mybutton text-center" id="new2">
+            <input type="submit" value="@ArabTradersGroup.App_LocalResources.ATG.btnsaveproduct" class="btn btn-default">
+            <button type="submit" class="btn btn-default">@ArabTradersGroup.App_LocalResources.ATG.btneditabout</button>
+        </div>
+
+
+
+    }
+
+</div>
+<!-- End right-side -->
+<!-- --------------------------------------------------- -->
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <link href="@ArabTradersGroup.App_LocalResources.ATG.csscontact" rel="stylesheet" />
+}

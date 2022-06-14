@@ -1,0 +1,748 @@
+﻿@using ArabTradersGroup.Models
+@using System.Threading;
+@using System.Globalization;
+@model HomeViewModel
+
+@{
+    ViewBag.Title = "Home";
+    ViewBag.currenthome = "current";
+}
+
+
+<!--Main Slider-->
+<section class="main-slider" id="scroll-section-one" data-start-height="900" data-slide-overlay="yes">
+
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="Images/images/main-slider/4.jpg" data-saveperformance="off" data-title="">
+                    <img src="~/Images/images/main-slider/4.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                    <div class="tp-caption sfl sfb tp-resizeme"
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="-150"
+                         data-speed="1500"
+                         data-start="500"
+                         data-easing="easeOutExpo"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.3"
+                         data-endspeed="1200"
+                         data-endeasing="Power4.easeIn"><h2>@ArabTradersGroup.App_LocalResources.ATG.slidercompanyname</h2></div>
+
+                        <div class="tp-caption sfr sfb tp-resizeme"
+                             data-x="center" data-hoffset="0"
+                             data-y="center" data-voffset="-70"
+                             data-speed="1500"
+                             data-start="500"
+                             data-easing="easeOutExpo"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-elementdelay="0.01"
+                             data-endelementdelay="0.3"
+                             data-endspeed="1200"
+                             data-endeasing="Power4.easeIn"><div class="big-text">@ArabTradersGroup.App_LocalResources.ATG.sliderh2</div></div>
+
+                            <!--div class="tp-caption sfl sfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="0"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><a href="shop.html" class="theme-btn btn-style-one">Shop Now</a></div-->
+
+
+                        </li>
+
+                        <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1000" data-thumb="Images/images/main-slider/1.jpg" data-saveperformance="off" data-title="">
+                            <img src="~/Images/images/main-slider/1.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                            <div class="tp-caption sft sfb tp-resizeme"
+                                 data-x="center" data-hoffset="0"
+                                 data-y="center" data-voffset="-140"
+                                 data-speed="1500"
+                                 data-start="500"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.01"
+                                 data-endelementdelay="0.3"
+                                 data-endspeed="1200"
+                                 data-endeasing="Power4.easeIn"></div>
+
+                            <div class="tp-caption sft sfb tp-resizeme"
+                                 data-x="center" data-hoffset="0"
+                                 data-y="center" data-voffset="-10"
+                                 data-speed="1500"
+                                 data-start="500"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.01"
+                                 data-endelementdelay="0.3"
+                                 data-endspeed="1200"
+                                 data-endeasing="Power4.easeIn"><h3 class="text-center big-text">@ArabTradersGroup.App_LocalResources.ATG.sliderh3</h3><br><h3 class="text-center big-text">@ArabTradersGroup.App_LocalResources.ATG.sliderh3br</h3></div>
+
+                                <!--div class="tp-caption sfb sfb tp-resizeme"
+                    data-x="center" data-hoffset="0"
+                    data-y="center" data-voffset="110"
+                    data-speed="1500"
+                    data-start="500"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"><a href="shop.html" class="theme-btn btn-style-one">Shop Now</a> &ensp;&ensp; <a href="shop.html" class="theme-btn btn-style-three">Buy Now</a></div-->
+
+
+                            </li>
+
+                        <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1000" data-thumb="/Images/images/main-slider/3.jpg" data-saveperformance="off" data-title="">
+                            <img src="~/Images/images/main-slider/3.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                            <div class="tp-caption sft sfb tp-resizeme"
+                                 data-x="center" data-hoffset="0"
+                                 data-y="center" data-voffset="-140"
+                                 data-speed="1500"
+                                 data-start="500"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.01"
+                                 data-endelementdelay="0.3"
+                                 data-endspeed="1200"
+                                 data-endeasing="Power4.easeIn"></div>
+                            @*<figure class="content-image"><img src="~/Images/images/main-slider/3.jpg" alt=""></figure>*@
+
+                            <div class="tp-caption sft sfb tp-resizeme"
+                                 data-x="center" data-hoffset="0"
+                                 data-y="center" data-voffset="-10"
+                                 data-speed="1500"
+                                 data-start="500"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.01"
+                                 data-endelementdelay="0.3"
+                                 data-endspeed="1200"
+                                 data-endeasing="Power4.easeIn"><h3 class="text-center big-text">@ArabTradersGroup.App_LocalResources.ATG.sliderh3slide3</h3></div>
+
+                                <!--div class="tp-caption sfb sfb tp-resizeme"
+        data-x="center" data-hoffset="0"
+        data-y="center" data-voffset="110"
+        data-speed="1500"
+        data-start="500"
+        data-easing="easeOutExpo"
+        data-splitin="none"
+        data-splitout="none"
+        data-elementdelay="0.01"
+        data-endelementdelay="0.3"
+        data-endspeed="1200"
+        data-endeasing="Power4.easeIn"><a href="shop.html" class="theme-btn btn-style-one">Shop Now</a> &ensp;&ensp; <a href="shop.html" class="theme-btn btn-style-three">Buy Now</a></div-->
+
+
+                            </li>
+
+                                <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1000" data-thumb="/Images/images/main-slider/2.jpg" data-saveperformance="off" data-title="">
+                                    <img src="~/Images/images/main-slider/2.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                                    <div class="tp-caption sft sfb tp-resizeme"
+                                         data-x="center" data-hoffset="0"
+                                         data-y="center" data-voffset="-140"
+                                         data-speed="1500"
+                                         data-start="500"
+                                         data-easing="easeOutExpo"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-elementdelay="0.01"
+                                         data-endelementdelay="0.3"
+                                         data-endspeed="1200"
+                                         data-endeasing="Power4.easeIn"></div>
+
+                                    <div class="tp-caption sft sfb tp-resizeme"
+                                         data-x="center" data-hoffset="0"
+                                         data-y="center" data-voffset="-10"
+                                         data-speed="1500"
+                                         data-start="500"
+                                         data-easing="easeOutExpo"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-elementdelay="0.01"
+                                         data-endelementdelay="0.3"
+                                         data-endspeed="1200"
+                                         data-endeasing="Power4.easeIn"><h3 class="text-center big-text">@ArabTradersGroup.App_LocalResources.ATG.sliderh3slide3</h3></div>
+
+                                        <!--div class="tp-caption sfb sfb tp-resizeme"
+                            data-x="center" data-hoffset="0"
+                            data-y="center" data-voffset="110"
+                            data-speed="1500"
+                            data-start="500"
+                            data-easing="easeOutExpo"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.3"
+                            data-endspeed="1200"
+                            data-endeasing="Power4.easeIn"><a href="shop.html" class="theme-btn btn-style-one">Shop Now</a> &ensp;&ensp; <a href="shop.html" class="theme-btn btn-style-three">Buy Now</a></div-->
+
+
+                                    </li>
+
+                                </ul>
+
+                            <div class="tp-bannertimer"></div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!--Intro Section-->
+                <section class="intro-section">
+                    <div class="inner-part">
+                        <div class="auto-container">
+                            <div class="content-box">
+                                <div class="inner-box">
+                                    <!--Section Title-->
+                                    <div class="sec-title-one">
+                                        <h2>@ArabTradersGroup.App_LocalResources.ATG.welcomourcompany</h2>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <!--Content Column-->
+                                        <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="inner text-left wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                                <h3> @ArabTradersGroup.App_LocalResources.ATG.ourexport</h3>
+                                                <div class="text">
+
+                                                    @ArabTradersGroup.App_LocalResources.ATG.ourexportparagraph
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Content Column-->
+                                        <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="inner text-right wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                                <h3>  @ArabTradersGroup.App_LocalResources.ATG.ourimport</h3>
+                                                <div class="text">
+
+                                                    @ArabTradersGroup.App_LocalResources.ATG.ourimportparagraph
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!--About Farm Section-->
+                <section class="about-farm">
+                    <div class="auto-container">
+                        <!--Section Title-->
+                        <div class="sec-title-two">
+                            <h2>@ArabTradersGroup.App_LocalResources.ATG.aboutcompany</h2>
+                        </div>
+
+                        <div class="row clearfix">
+                            <!--Column-->
+                            <div class="column col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                                <figure class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="Images/images/resource/about.jpeg" alt=""></figure>
+                            </div>
+                            <!--Column-->
+                            <div class="column col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                                <div class="tabs-box tabs-style-one">
+                                    <div class="row clearfix">
+
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <!--Tab Buttons-->
+                                            <ul class="tab-buttons clearfix">
+                                                <li class="tab-btn" data-tab="#tab-one"><span class="txt"><i class=" fa fa-2x fa-home "></i></span></li>
+                                                <li class="tab-btn active-btn" data-tab="#tab-two"><span class="txt"><i class="fa fa-2x fa-briefcase"></i></span></li>
+                                                <li class="tab-btn" data-tab="#tab-three"><span class="txt"><i class="fa fa-2x fa-flag"></i></span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                            <!--Tabs Content-->
+                                            <div class="tabs-content">
+
+                                                <!--Tab-->
+                                                <div class="tab" id="tab-one">
+                                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab1</h3>
+                                                    <div class="content">
+
+                                                        <p class="text-info text-justify">
+
+                                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab1paragraph
+                                                        </p>
+
+                                                    </div>
+                                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                                </div>
+
+                                                <!--Tab / Active Tab-->
+                                                <div class="tab active-tab" id="tab-two">
+                                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab2 </h3>
+                                                    <div class="content">
+
+                                                        <p class="text-success text-justify">
+
+                                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab2paragraph
+
+                                                        </p>
+
+                                                    </div>
+                                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                                </div>
+
+                                                <!--Tab-->
+                                                <div class="tab" id="tab-three">
+                                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.aboutustab3</h3>
+                                                    <div class="content">
+                                                        <p class="text-primary text-justify">
+                                                            @ArabTradersGroup.App_LocalResources.ATG.aboutustab3paragraph
+
+                                                        </p>
+
+                                                    </div>
+                                                    <h5 class="author-name">@ArabTradersGroup.App_LocalResources.ATG.aboutusauthor</h5>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <!--Gallery Section-->
+                <section class="gallery-section">
+                    <div class="auto-container">
+                        <!--Section Title-->
+                        <div class="sec-title-one">
+                            <h2>@ArabTradersGroup.App_LocalResources.ATG.companyproducts</h2>
+                        </div>
+
+                        <div class="mixitup-gallery">
+                            <!--Filter-->
+                            @*<div class="filters text-center">
+                                    <ul class="filter-tabs filter-btns clearfix">
+                                        <li class="active filter" data-role="button" data-filter="all">All</li>
+                                        <li class="filter" data-role="button" data-filter=".fruits">rice</li>
+                                        <li class="filter" data-role="button" data-filter=".vegetables">madshosh</li>
+                                        <li class="filter" data-role="button" data-filter=".breads">fasolya</li>
+                                        <li class="filter" data-role="button" data-filter=".juices">homos</li>
+                                    </ul>
+                                </div>*@
+
+                            <!--Filter List-->
+                            <div class="filter-list row clearfix">
+
+
+
+                                @foreach (var item in Model.LatestProducts)
+                                {
+
+                                    if (CultureInfo.CurrentCulture.Name == "en-US")
+                                    {
+
+                                        <!--Default Food Item-->
+                                        <div class="col-md-4 col-sm-6 col-xs-12 default-food-item mix mix_all all juices">
+                                            <div class="inner-box">
+                                                <div class="image-box">
+                                                    <figure class="image"><a class="lightbox-image option-btn" data-fancybox-group="example-gallery" href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)" title="@item.Product_Name_En"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+@item.Product_Image)" alt=""></a></figure>
+                                                    <div class="lower-content">
+                                                        <h3><a href="@Url.Action("Products","Home")">@Html.DisplayFor(m => item.Product_Name_En)</a></h3>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    }
+                                    else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+                                    {
+
+                                        <!--Default Food Item-->
+                                        <div class="col-md-4 col-sm-6 col-xs-12 default-food-item mix mix_all all juices">
+                                            <div class="inner-box">
+                                                <div class="image-box">
+                                                    <figure class="image"><a class="lightbox-image option-btn" data-fancybox-group="example-gallery" href="@Url.Content("/Images/imagesadmin/products/"+@item.Product_Image)" title="@item.Product_Name_Ar"><img src="@Url.Content("/Images/imagesadmin/productsresized/"+@item.Product_Image)" alt=""></a></figure>
+                                                    <div class="lower-content">
+                                                        <h3><a href="@Url.Action("Products","Home")">@Html.DisplayFor(m => item.Product_Name_Ar)</a></h3>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+
+
+
+
+
+                                }
+
+                            </div>
+
+                            <!--Button Outer-->
+                            <div class="more-btn-outer text-center"><a href="@Url.Action("Products","Home")" class="theme-btn btn-style-four">@ArabTradersGroup.App_LocalResources.ATG.btnviewmore</a></div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <!--Gallery Section Two-->
+                @*<section class="gallery-section-two fullwidth-gallery">
+                        <div class="auto-container">
+                            <!--Section Title-->
+                            <div class="sec-title-two">
+                                <h2>@ArabTradersGroup.App_LocalResources.ATG.latestgalleries</h2>
+                            </div>
+                        </div>
+
+                        <div class="clearfix">
+
+                            @foreach (var item in Model.LatestGalleries)
+                        {
+
+                            if (CultureInfo.CurrentCulture.Name == "en-US")
+                            {
+                                <!--Default Portfolio Item -->
+                                <div class="default-portfolio-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="inner-box">
+                                        <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+item.Photo_Path)" alt=""></figure>
+                                        <div class="overlay-box">
+                                            <div class="overlay-inner">
+                                                <div class="overlay-content">
+                                                    <a href="@Url.Content("/Images/imagesadmin/galleries/"+item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_En" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                                else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+                                {
+
+
+                            <!--Default Portfolio Item -->
+                            <div class="default-portfolio-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+item.Photo_Path)" alt=""></figure>
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner">
+                                            <div class="overlay-content">
+                                                <a href="@Url.Content("/Images/imagesadmin/galleries/"+item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_Ar" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                }
+
+
+
+                        }
+
+
+                    </div>
+
+                        <!--Button Outer-->
+                        <div class="more-btn-outer text-center"><a href="@Url.Action("Gallery","Home")" class="theme-btn btn-style-four">@ArabTradersGroup.App_LocalResources.ATG.btnviewmore</a></div>
+
+
+                    </section>*@
+
+                <!--Gallery Section-->
+                <section class="gallery-section gallery-page">
+
+                    <div class="auto-container">
+                       
+                           
+                            <!--Section Title-->
+                            <div class="sec-title-one">
+                                <h2>@ArabTradersGroup.App_LocalResources.ATG.latestgalleries</h2>
+                            </div>
+                        
+                        <div class="mixitup-gallery">
+                            <!--Filter-->
+                            @*<div class="filters text-center">
+                <ul class="filter-tabs filter-btns clearfix">
+                    <li class="active filter" data-role="button" data-filter="all">All</li>
+                    <li class="active filter" data-role="button" data-filter=".animals">Animals</li>
+                    <li class="active filter" data-role="button" data-filter=".farm">Farm</li>
+                    <li class="active filter" data-role="button" data-filter=".flower">Flower</li>
+                    <li class="filter" data-role="button" data-filter=".fruits">Fruits</li>
+                    <li class="filter" data-role="button" data-filter=".insects">Insects</li>
+                    <li class="filter" data-role="button" data-filter=".market">Market</li>
+                    <li class="filter" data-role="button" data-filter=".organic">Organic</li>
+                    <li class="filter" data-role="button" data-filter=".vegetables">Vegetables</li>
+                </ul>
+            </div>*@
+
+                            <!--Filter List-->
+                            <div class="filter-list row clearfix">
+
+                                @foreach (var item in Model.LatestGalleries)
+            {
+
+                if (CultureInfo.CurrentCulture.Name == "en-US")
+                {
+
+
+                    <!--Default Portfolio Item -->
+                    <div class="default-portfolio-item mix mix_all col-md-4 col-sm-6 col-xs-12 market organic vegetables">
+                        <div class="inner-box">
+                            <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+@item.Photo_Path)" alt=""></figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <a href="@Url.Content("/Images/imagesadmin/galleries/"+@item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_En" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+
+                    <!--Default Portfolio Item -->
+                    <div class="default-portfolio-item mix mix_all col-md-4 col-sm-6 col-xs-12 market organic vegetables">
+                        <div class="inner-box">
+                            <figure class="image-box"><img src="@Url.Content("/Images/imagesadmin/galleriesresized/"+@item.Photo_Path)" alt=""></figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <a href="@Url.Content("/Images/imagesadmin/galleries/"+@item.Photo_Path)" class="lightbox-image option-btn theme-btn" title="@item.Photo_Caption_Ar" data-fancybox-group="fancybox"><span class="fa fa-search"></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+}
+
+
+
+
+
+
+
+}
+                            </div>
+                            <!--Button Outer-->
+                            <div class="more-btn-outer text-center"><a href="@Url.Action("Gallery","Home")" class="theme-btn btn-style-four">@ArabTradersGroup.App_LocalResources.ATG.btnviewmore</a></div>
+
+                        </div>
+
+
+
+                    </div>
+                </section>
+                <!--Our Team-->
+                <section class="team-section">
+                    <div class="auto-container">
+                        <!--Section Title-->
+                        <div class="sec-title-one">
+                            <h2>@ArabTradersGroup.App_LocalResources.ATG.ourmanagers</h2>
+                        </div>
+
+                        <div class="row clearfix">
+
+                            @foreach (var item in Model.HeadManagers)
+                            {
+
+                                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                    <!--Default Team Member / Vertical-->
+                                    <div class="default-team-member vertical">
+                                        <div class="inner-box clearfix">
+                                            <!--Image Column-->
+                                            <div class="image-column"><figure class="image"><img src="@Url.Content("/Images/imagesadmin/managersresized/"+item.Manager_Image)" alt=""></figure></div>
+                                            <!--Content Column-->
+                                            <div class="content-column">
+                                                <div class="inner">
+                                                    @{
+                                                        ATGEntities Context = new ATGEntities();
+
+                                                        string Fname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Fname;
+                                                        string Lname = Context.AspNetManagers.Find(item.Manager_Id).Manager_Lname;
+                                                        string FullName = Fname + " " + Lname;
+
+                                                        item.Manager_Fname = FullName;
+
+
+                                                    }
+
+                                                    <h3>@Html.DisplayFor(m => item.Manager_Fname)</h3>
+                                                    <div class="text">@Html.DisplayFor(m => item.Manager_Position)</div>
+                                                    <div class="social-links">
+                                                        @*<a href="#"><span class="fa fa-facebook-official"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-instagram"></span></a>
+                                                        <a href="#"><span class="fa fa-skype"></span></a>
+                                                        <a href="#"><span class="fa fa-vimeo-square"></span></a>*@
+
+                                                        @ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            }
+
+
+                        </div>
+                    </div>
+                </section>
+
+                <!--Testimonials Section-->
+                <section class="testimonial-section">
+
+                    <div class="oval-cut"></div>
+
+                    <div class="auto-container">
+                        <div class="carousel-outer">
+                            <div class="icon-box"><span class="flaticon-blocks-with-angled-cuts"></span></div>
+
+                            <div class="single-item-carousel">
+                                <!--Slide Item-->
+                                <div class="slide-item">
+                                    <div class="text-content">
+
+
+                                        <p>
+
+                                            @ArabTradersGroup.App_LocalResources.ATG.testimonial1paragraph
+
+
+                                        </p>
+
+                                    </div>
+                                    <div class="quote-info">
+                                        <figure class="author-thumb img-circle"><img class="img-circle" src="~/Images/images/imagesrr.jpg" alt=""></figure>
+                                        <h4>@ArabTradersGroup.App_LocalResources.ATG.testimonial1author</h4>
+                                        <div class="designation">@ArabTradersGroup.App_LocalResources.ATG.testimonial1role</div>
+                                    </div>
+                                </div>
+
+                                <!--Slide Item-->
+                                <div class="slide-item">
+                                    <div class="text-content">
+                                        @ArabTradersGroup.App_LocalResources.ATG.testimonial2paragraph
+
+                                    </div>
+                                    <div class="quote-info">
+                                        <figure class="author-thumb img-circle"><img class="img-circle" src="~/Images/images/imagesdd.jpg" alt=""></figure>
+                                        <h4>@ArabTradersGroup.App_LocalResources.ATG.testimonial2author</h4>
+                                        <div class="designation">@ArabTradersGroup.App_LocalResources.ATG.testimonial2role</div>
+                                    </div>
+                                </div>
+
+                                <!--Slide Item-->
+                                <div class="slide-item">
+                                    <div class="text-content">
+                                        @ArabTradersGroup.App_LocalResources.ATG.testimonial3paragraph
+
+
+                                    </div>
+
+                                    <div class="quote-info">
+                                        <figure class="author-thumb img-circle"><img class="img-circle" src="~/Images/images/imagesddd.jpg" alt=""></figure>
+                                        <h4>@ArabTradersGroup.App_LocalResources.ATG.testimonial3author</h4>
+                                        <div class="designation">@ArabTradersGroup.App_LocalResources.ATG.testimonial3role </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide-item">
+                                    <div class="text-content">
+                                        @ArabTradersGroup.App_LocalResources.ATG.testimonial4paragraph
+
+
+                                    </div>
+                                    <div class="quote-info">
+                                        <figure class="author-thumb img-circle"><img class="img-circle" src="~/Images/images/images.jpg" alt=""></figure>
+                                        <h4>@ArabTradersGroup.App_LocalResources.ATG.testimonial4author</h4>
+                                        <div class="designation">@ArabTradersGroup.App_LocalResources.ATG.testimonial4role </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!--Fluid Section Two-->
+                <section class="fluid-section-two">
+
+                    <div class="outer-box clearfix">
+                        <!--Left Column-->
+                        <div class="left-column">
+                            <div class="clearfix">
+                                <div class="inner-box">
+                                    <h5>@ArabTradersGroup.App_LocalResources.ATG.newsletter</h5>
+                                    <h3>@ArabTradersGroup.App_LocalResources.ATG.stayupdate</h3>
+
+                                    <div class="subscribe-form">
+                                        <form method="post" action="http://wp1.themexlab.com/2017/warsaw/contact.html">
+                                            <div class="form-group">
+                                                <input type="email" name="email" value="" placeholder="@ArabTradersGroup.App_LocalResources.ATG.placholderemail" required>
+                                                <button type="submit" class="theme-btn btn-style-three">@ArabTradersGroup.App_LocalResources.ATG.sendnow</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Right Column-->
+                        <div class="right-column">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.1506915485043!2d31.179127020138743!3d31.10554348159927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7a0c9f8e1e3e7%3A0x8632cda98cd5989c!2z2LTYsdmD2Kkg2KfZhNiq2KzYp9ixINin2YTYudix2Kgg2YTZhNiq2KzYp9ix2Kk!5e0!3m2!1sar!2seg!4v1513242863976" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </section>
+

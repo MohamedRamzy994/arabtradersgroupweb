@@ -1,0 +1,165 @@
+﻿@using ArabTradersGroup.Models
+@model FaqstViewModel
+@using System.Threading
+@using System.Globalization
+@{
+    ViewBag.Title = "Faq";
+    ViewBag.currentfaq = "current";
+
+}
+
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../Images/images/background/bg-page-title-1.jpg);">
+    <div class="auto-container">
+        <h1>@ArabTradersGroup.App_LocalResources.ATG.faqs</h1>
+    </div>
+</section>
+
+
+<!--Product Info Tabs-->
+<div class="container FAQ">
+    <div class="product-info-tabs">
+
+        <!--Product Tabs-->
+        <div class="prod-tabs tabs-box" id="product-tabs">
+
+            <div class="row clearfix">
+                <div class="buttons-column col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <!--Tab Btns-->
+                    <ul class="tab-btns tab-buttons clearfix">
+                        @foreach (var item in Model.Faqs)
+    {
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+                    <li data-tab="#@item.Faq_Id" class="tab-btn active-btn">@Html.DisplayFor(m => item.Faq_Question_En)</li>
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+                    <li data-tab="#@item.Faq_Id" class="tab-btn active-btn">@Html.DisplayFor(m => item.Faq_Question_Ar)</li>
+}
+
+
+
+}
+
+
+                    </ul>
+                </div>
+
+                <div class="content-column col-lg-9 col-md-8 col-sm-8 col-xs-12">
+                    <!--Tabs Content-->
+                    <div class="tabs-container tabs-content">
+
+
+                        @foreach (var item in Model.Faqs)
+    {
+
+
+        if (CultureInfo.CurrentCulture.Name == "en-US")
+        {
+            bool renderRow = Model.Faqs.ToList().IndexOf(item) == 0 ? true : false;
+            if (renderRow == true)
+            {
+
+
+
+                    <div class="tab active-tab" id="@item.Faq_Id">
+                        <h3>@Html.DisplayFor(m => item.Faq_Question_En)</h3>
+                        <div class="content">
+                            <p>
+
+                                @Html.DisplayFor(m => item.Faq_Answer_En)
+
+                                .
+                            </p>
+
+                        </div>
+                    </div>
+
+}
+else
+{
+
+
+                    <div class="tab" id="@item.Faq_Id">
+                        <h3>@Html.DisplayFor(m => item.Faq_Question_En)</h3>
+                        <div class="content">
+                            <p>
+
+                                @Html.DisplayFor(m => item.Faq_Answer_En)
+
+                                .
+                            </p>
+
+                        </div>
+                    </div>
+
+}
+}
+
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+bool renderRow = Model.Faqs.ToList().IndexOf(item) == 0 ? true : false;
+if (renderRow == true)
+{
+
+
+
+                    <div class="tab active-tab" id="@item.Faq_Id">
+                        <h3>@Html.DisplayFor(m => item.Faq_Question_Ar)</h3>
+                        <div class="content">
+                            <p>
+
+                                @Html.DisplayFor(m => item.Faq_Answer_Ar)
+
+                                .
+                            </p>
+
+                        </div>
+                    </div>
+
+}
+else
+{
+
+
+                    <div class="tab" id="@item.Faq_Id">
+                        <h3>@Html.DisplayFor(m => item.Faq_Question_Ar)</h3>
+                        <div class="content">
+                            <p>
+
+                                @Html.DisplayFor(m => item.Faq_Answer_Ar)
+
+                                .
+                            </p>
+
+                        </div>
+                    </div>
+
+}
+
+}
+
+
+
+}
+
+                        <!--Tab / Active Tab-->
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

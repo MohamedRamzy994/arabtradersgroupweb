@@ -1,0 +1,264 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>@ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup</title>
+    <link href="~/Images/imagesadmin/favicon.ico" rel="icon" />
+    <!-- stylesheets of Bootstrap  css -->
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssbootstrap">
+
+    <link rel='stylesheet' href='@ArabTradersGroup.App_LocalResources.ATG.cssbootstrapRTL'>
+    <!-- Libarary of font Awesome -->
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssfontawesome">
+
+    <!-- Hover Css -->
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.csshover">
+
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssstyle">
+
+
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssteam" />
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssproduct" />
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssmanager" />
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssgallery" />
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssfaq" />
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssdetails" />
+
+
+
+
+    <link rel="stylesheet" href="@ArabTradersGroup.App_LocalResources.ATG.cssmedia">
+    <link href="@ArabTradersGroup.App_LocalResources.ATG.cssmedia2" rel="stylesheet" />
+
+    <!-- My Media CSS -->
+    <!-- Fonts-->
+    <link rel='stylesheet' href='@ArabTradersGroup.App_LocalResources.ATG.cssfont'>
+
+
+
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- ----------------------------------------------------------- -->
+
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 0px;
+        }
+
+            .navbar-nav > li > a:hover {
+                padding-top: 10px;
+                padding-bottom: 0px;
+                background-color: rgba(51, 51, 51, 0.3);
+            }
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <!-- start navbar -->
+    <section class="Mynavbar">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="first hidden-xs">
+                    <i class="fa fa-gear gear-check"></i>
+                    <p><a href="@Url.Action("Index","Home",null)" style="color:white;"> @ArabTradersGroup.App_LocalResources.ATG.arabtradersgroup  </a></p>
+                </div>
+                <!-- End First -->
+
+                <div class="@ArabTradersGroup.App_LocalResources.ATG.pull myList">
+
+                  
+
+                     
+
+                      @Html.Partial("_LoginPartial")
+
+
+
+                    
+
+
+
+
+
+                </div>
+                <!-- End Second -->
+             
+            </div>
+            <!-- End container -->
+
+        </div>
+        <!-- End container -->
+
+    </section>
+    <!-- End navbar -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Start All -->
+    <section class="all">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <!-- --------------------------------------------------- -->
+
+                <div class="col-md-2 col-sm-3 col-xs-3 left-side">
+
+                    <div class="search">
+                        <input type="search" placeholder="@ArabTradersGroup.App_LocalResources.ATG.search ">
+                        <button>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="dashborad-links">
+                        <ul class="dashborad-list">
+
+                            <li class="@ViewBag.Index">
+                                <a href="@Url.Action("Index","Dashboard",null)">
+                                    <i class="fa fa-tachometer"></i>
+                                    <span style="position: relative;">@ArabTradersGroup.App_LocalResources.ATG.dashboard</span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="@ViewBag.Product">
+                                <a href="@Url.Action("Product","Dashboard",null)">
+                                    <i class="fa fa-truck"></i>
+                                    <span style="position: relative;">@ArabTradersGroup.App_LocalResources.ATG.products</span>
+                                </a>
+                            </li>
+
+                            <li class="@ViewBag.Gallery">
+                                <a href="@Url.Action("Gallery","Dashboard",null)">
+                                    <i class="fa fa-file-image-o"></i>
+                                    <span style="position: relative;">@ArabTradersGroup.App_LocalResources.ATG.gallery </span>
+                                </a>
+                            </li>
+
+
+                            <li class="@ViewBag.Vendor">
+                                <a href="@Url.Action("Vendor","Dashboard",null)">
+                                    <i class="fa fa-user"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.vendor</span>
+                                </a>
+                            </li>
+
+
+                            <li class="@ViewBag.Team">
+                                <a href="@Url.Action("Team","Dashboard",null)">
+                                    <i class="fa fa-handshake-o"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.team </span>
+                                </a>
+                            </li>
+
+                            <li class="@ViewBag.Manager">
+                                <a href="@Url.Action("Manager","Dashboard",null)">
+                                    <i class="fa fa-child"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.managers</span>
+                                </a>
+                            </li>
+
+                            <li class="@ViewBag.Faq">
+                                <a href="@Url.Action("Faq","Dashboard",null)">
+                                    <i class="fa fa-question-circle"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.faq </span>
+                                </a>
+                            </li>
+                            <li class="@ViewBag.About">
+                                <a href="@Url.Action("About","Dashboard",null)">
+                                    <i class="fa fa-address-book"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.about </span>
+                                </a>
+                            </li>
+
+                            <li class="@ViewBag.Contact">
+                                <a href="@Url.Action("Contact","Dashboard",null)">
+                                    <i class="fa fa-user-circle"></i>
+                                    <span style="position: relative;"> @ArabTradersGroup.App_LocalResources.ATG.contact</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                        <!-- End dashborad-list -->
+
+                    </div>
+                    <!-- End dashborad-links -->
+
+                </div>
+                <!-- End  left-side -->
+                <!-- --------------------------------------------------- -->
+
+
+                @RenderBody()
+
+
+
+
+
+            </div>
+            <!-- End row -->
+
+        </div>
+        <!-- End container -->
+
+    </section>
+    <!-- End All -->
+    <!-- ------------------------------------------------------------------------ -->
+
+    <div class="col-xs-offset-2 col-xs-10 footer text-center">
+
+        <p>  @ArabTradersGroup.App_LocalResources.ATG.copyright  &#64; <a href="#"> @ArabTradersGroup.App_LocalResources.ATG.applet </a>  </p>
+
+    </div>
+
+
+
+
+    <!-- ------------------------------------------------------------------------------- -->
+
+
+    <script src="~/Scripts/jsadmin/jquery-3.2.1.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="~/Scripts/jsadmin/bootstrap.min.js"></script>
+
+    <!-- nicescroll plugin -->
+    <script src="~/Scripts/jsadmin/jquery.nicescroll.min.js"></script>
+
+    <script src="~/Scripts/jsadmin/jquery.barfiller.js"></script>
+
+    <!-- Java Script Code -->
+    <script src="~/Scripts/jsadmin/myCode.js"></script>
+
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
